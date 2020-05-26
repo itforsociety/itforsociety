@@ -3,16 +3,26 @@ import { NgModule } from '@angular/core';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { InputUserDataFormComponent } from './input-user-data-form/input-user-data-form.component';
 import { DisplayUserDataComponent } from './display-user-data/display-user-data.component';
 
 import {Routes,RouterModule} from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from './material.module';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 const routes: Routes = [
   {
     path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'registration',
     component: InputUserDataFormComponent
   },
   {
@@ -24,6 +34,7 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     InputUserDataFormComponent,
     DisplayUserDataComponent
   ],
@@ -32,9 +43,18 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    MatNativeDateModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+  ],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
