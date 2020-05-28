@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { mixinColor } from '@angular/material/core';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,9 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+   //$("#header").css("background-color", "blue");
   }
+
+  
 
 }
