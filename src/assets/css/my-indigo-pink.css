@@ -1,0 +1,6 @@
+@import '../css/indigo-pink.css';
+
+.theme-primary{
+    background: #3f51b5;
+    color: #fff;
+}
