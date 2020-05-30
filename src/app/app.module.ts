@@ -17,6 +17,7 @@ import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { FooterComponent } from './footer/footer.component';
 import { QuotesComponent } from './quotes/quotes.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {
@@ -40,7 +41,8 @@ const routes: Routes = [
     InputUserDataFormComponent,
     DisplayUserDataComponent,
     FooterComponent,
-    QuotesComponent
+    QuotesComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

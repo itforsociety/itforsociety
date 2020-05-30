@@ -41,6 +41,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
+import {OverlayContainer} from '@angular/cdk/overlay';
 
 @NgModule({
   exports: [
@@ -90,6 +91,12 @@ import {MatTreeModule} from '@angular/material/tree';
   ]
 })
 export class MaterialModule {}
+
+export class UnicornCandyAppModule {
+  constructor(overlayContainer: OverlayContainer) {
+    overlayContainer.getContainerElement().classList.add('unicorn-dark-theme');
+  }
+}
 
 
 /**  Copyright 2019 Google LLC. All Rights Reserved.
