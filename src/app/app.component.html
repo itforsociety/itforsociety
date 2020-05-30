@@ -1,12 +1,34 @@
+<mat-toolbar id="header" class="header" color="primary">
+  <img id="logoHeader" class="logoHeader" src="../assets/IT for society transparent inverted.png" alt="logo">
 
-<!-- <div class="container-fluid">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>Hello World!</h1>
-      <app-input-user-data-form></app-input-user-data-form>
-      <app-display-user-data></app-display-user-data>
-    </div>
-  </div>
-</div> -->
+  <span class="fill-remaining-space"></span>
+
+  <button mat-button id="matButton1" class="matButton" [matMenuTriggerFor]="belowMenu1">Home</button>
+  <mat-menu #belowMenu1="matMenu" yPosition="below">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button id="matButton2" class="matButton" [matMenuTriggerFor]="belowMenu2">Stories</button>
+  <mat-menu #belowMenu2="matMenu" yPosition="below">
+      <button mat-menu-item>about</button>
+      <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <button mat-button id="matButton3" class="matButton" [matMenuTriggerFor]="belowMenu3">Contact</button>
+  <mat-menu #belowMenu3="matMenu" yPosition="below">
+      <button mat-menu-item>somehting</button>
+      <button mat-menu-item>Item 2</button>
+  </mat-menu>
+
+  <span class="fill-remaining-space"></span>
+  
+  <button mat-button id="matButton4" class="matButton" [matMenuTriggerFor]="belowMenu4">About</button>
+  <mat-menu #belowMenu4="matMenu" yPosition="below">
+      <button id="itemButton4" mat-menu-item>Item 122</button>
+      <button mat-menu-item>Item 2</button>
+  </mat-menu>
+</mat-toolbar>
 <router-outlet></router-outlet>
+<app-footer></app-footer>
     

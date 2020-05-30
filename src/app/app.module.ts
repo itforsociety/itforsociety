@@ -15,6 +15,8 @@ import {MaterialModule} from './material.module';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import { FooterComponent } from './footer/footer.component';
+import { QuotesComponent } from './quotes/quotes.component';
 
 const routes: Routes = [
   {
@@ -36,7 +38,9 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     InputUserDataFormComponent,
-    DisplayUserDataComponent
+    DisplayUserDataComponent,
+    FooterComponent,
+    QuotesComponent
   ],
   imports: [
     BrowserModule,

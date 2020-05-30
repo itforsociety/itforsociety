@@ -1,7 +1,6 @@
- /*using full height minus header size */
- .mat-card {
-    height: 93.5%;
-} 
+/* .cardImage {
+    max-width: 800px;
+} */
 
 /* GLOBAL STYLES
 -------------------------------------------------- */
@@ -13,13 +12,34 @@
   -------------------------------------------------- */
   /* Carousel base class */
   #myCarouselContainer {
-    margin-top: 3vw;
     margin-bottom: 4rem;
+    max-height: 750px;
+    max-width: 750px;
   }
-
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  /* Declare heights because of positioning of img element */
+  .carousel-inner {
+    max-height: 650px;
+    background-color: #777;
+  }
+  /* .carousel-inner > .item > img {
+    max-height: 20vw;
+  } */
+  
   /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
 
 
 /* CUSTOMIZE THE CAROUSEL
@@ -28,6 +48,7 @@
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
+  max-width: 750px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
