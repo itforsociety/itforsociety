@@ -1,26 +1,16 @@
 <mat-toolbar id="header" class="header" color="primary">
     <img id="logoHeader" class="logoHeader" src="../assets/IT for society transparent inverted.png" alt="logo">
-  
     <span class="fill-remaining-space"></span>
-  
-    <button mat-button id="matButton1" class="matButton" [matMenuTriggerFor]="belowMenu1">Home</button>
-    <mat-menu #belowMenu1="matMenu" yPosition="below">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-    </mat-menu>
-  
+
+    <a mat-button id="matButton1" class="matButton" [matMenuTriggerFor]="belowMenu1" routerLink="/home">Home</a>
+    
     <button mat-button id="matButton2" class="matButton" [matMenuTriggerFor]="belowMenu2">Stories</button>
     <mat-menu #belowMenu2="matMenu" yPosition="below">
         <button mat-menu-item>about</button>
         <button mat-menu-item>Item 2</button>
     </mat-menu>
-  
-    <button mat-button id="matButton3" class="matButton" [matMenuTriggerFor]="belowMenu3">Contact</button>
-    <mat-menu #belowMenu3="matMenu" yPosition="below">
-        <button mat-menu-item>somehting</button>
-        <button mat-menu-item>Item 2</button>
-    </mat-menu>
-  
+    
+    <a mat-button id="matButton3" class="matButton" routerLink="/todo">Todo</a>
     <span class="fill-remaining-space"></span>
     
     <button mat-button id="matButton4" class="matButton" [matMenuTriggerFor]="belowMenu4">Theme</button>

@@ -1,3 +1,4 @@
+import {TodoSharedModule} from "../../projects/todo/src/app/app.module"
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
@@ -21,7 +22,7 @@ import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent
   },
   {
@@ -31,7 +32,11 @@ const routes: Routes = [
   {
     path: 'user/:uid',
     component: DisplayUserDataComponent
-  }
+  },
+  {
+    path: 'todo', 
+    loadChildren: '../../projects/todo/src/app/app.module#TodoSharedModule'
+  },
 ];
 
 @NgModule({
@@ -53,6 +58,7 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MaterialModule,
     MatNativeDateModule,
+    TodoSharedModule.forRoot(),
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
