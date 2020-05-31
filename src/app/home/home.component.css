@@ -27,7 +27,7 @@
   /* Carousel base class */
   #myCarouselContainer {
     margin-top: 1vw;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
   }
 
   /* GLOBAL STYLES
@@ -40,11 +40,11 @@
 
 /* Carousel base class */
 .carousel {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
+  bottom: 1rem;
   z-index: 10;
 }
 
