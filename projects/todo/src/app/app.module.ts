@@ -5,6 +5,7 @@ import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import {Routes,RouterModule} from '@angular/router';
 import { TaskComponent } from './task/task.component';
+import { TodoDataService } from './service/todo-data.service';
 
 const providers = []
 
@@ -25,7 +26,7 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [TodoDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
