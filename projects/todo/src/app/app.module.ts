@@ -10,7 +10,7 @@ const providers = []
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'todo',
     component: AppComponent
   }
 ]
