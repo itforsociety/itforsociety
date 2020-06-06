@@ -16,6 +16,7 @@ export class TaskComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.todoDataService.getAllTodos;
   }
 
 
@@ -23,7 +24,6 @@ export class TaskComponent implements OnInit {
   addTodo() {
     this.todoDataService.addTodo(this.newTodo);
     this.newTodo = new Todo();
-    console.log(this.newTodo);
   }
 
   toggleTodoComplete(todo) {
@@ -31,7 +31,7 @@ export class TaskComponent implements OnInit {
   }
 
   removeTodo(todo) {
-    this.todoDataService.deleteTodoById(todo.id);
+    this.todoDataService.deleteTodoById(todo.todo_task_id);
   }
 
   get todos() {
