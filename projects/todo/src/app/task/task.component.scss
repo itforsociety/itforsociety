@@ -1,0 +1,36 @@
+.task-container {
+    margin: 0 auto;
+    width: 60%;
+}
+
+@media (max-width: 1080px) {
+    .task-container {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .row-flex{
+    display: flex;
+    width: 100%;
+  }
+  .task-name{
+      flex: 80%;;
+      line-height: 40px;
+      font-size: xx-large;
+  }
+  .example-button-container {
+    flex: 20%;
+    display: flex;
+    justify-content: flex-end;
+  }

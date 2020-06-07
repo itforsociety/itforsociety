@@ -26,6 +26,10 @@ export class TaskComponent implements OnInit {
     this.newTodo = new Todo();
   }
 
+  updateTodo(todo) {
+    this.todoDataService.updateTodoById(todo.todo_task_id);
+  }
+
   toggleTodoComplete(todo) {
     this.todoDataService.toggleTodoComplete(todo);
   }
@@ -38,4 +42,7 @@ export class TaskComponent implements OnInit {
     return this.todoDataService.getAllTodos();
   }
 
+  disabled = true;
+
 }
+

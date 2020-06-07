@@ -1,6 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule,ModuleWithProviders } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MaterialModule} from '../../../../src/app/material.module';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import {Routes,RouterModule} from '@angular/router';
@@ -26,7 +32,12 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    MatNativeDateModule
+
   ],
   providers: [TodoDataService],
   bootstrap: [AppComponent]

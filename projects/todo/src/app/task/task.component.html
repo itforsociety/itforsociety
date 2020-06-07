@@ -1,21 +1,29 @@
-<section class="todoapp">
-    <header class="header">
-      <h1>Todos</h1>
-      <input class="new-todo" placeholder="What needs to be done here?" autofocus="" [(ngModel)]="newTodo.todo_task_name" (keyup.enter)="addTodo()">
-    </header>
-    <section class="main" *ngIf="todos.length > 0">
-      <ul class="todo-list">
-        <li *ngFor="let todo of todos" [class.completed]="todo.todo_task_complete_f">
-          <div class="view">
-            <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.todo_task_complete_f">
-            <label>{{todo.todo_task_name}}</label>
-            <button class="destroy" (click)="removeTodo(todo)"></button>
+<div class="task-container">
+  <mat-form-field class="example-full-width">
+    <mat-label>Add new task</mat-label>
+    <input matInput placeholder="Ex. Clean the house" [(ngModel)]="newTodo.todo_task_name" (keyup.enter)="addTodo()">
+  </mat-form-field>
+  <div class="main" *ngIf="todos.length > 0">
+    <mat-list #tasks>
+      <mat-list-item *ngFor="let todo of todos" [class.completed]="todo.todo_task_complete_f">
+        <div class="row-flex">
+          <div class="task-name">
+            <input matInput [readonly]="disabled" value="{{todo.todo_task_name}}" (keyup.enter)="updateTodo(todo)"/>
           </div>
-        </li>
-      </ul>
-    </section>
-    <footer class="footer" *ngIf="todos.length > 0">
-      <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
-    </footer>
-   
-  </section>
+          <div class="example-button-container">
+            <button mat-icon-button class="destroy" (click)="removeTodo(todo)" color="primary" aria-label="Example icon button with a menu icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button class="destroy" [(ngModel)]="disabled" color="primary" value="false" aria-label="Example icon button with a menu icon">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </div>
+        </div>
+       
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="footer" *ngIf="todos.length > 0">
+    <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
+  </div>
+</div>
