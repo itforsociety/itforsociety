@@ -24,7 +24,14 @@
     display: flex;
     width: 100%;
   }
+
+  .toggle{
+    padding: 10px;
+    margin-bottom: 3px;
+}
   .task-name{
+      display: flex;
+      justify-content: flex-start;
       flex: 80%;;
       line-height: 40px;
       font-size: xx-large;

@@ -10,7 +10,8 @@ import {TodoDataService} from '../service/todo-data.service';
 })
 export class TaskComponent implements OnInit {
 
-  newTodo: Todo = new Todo();
+  newTodo: Todo = new Todo();  
+  readonly = true;
 
   constructor(private todoDataService: TodoDataService) {
   }
@@ -42,7 +43,6 @@ export class TaskComponent implements OnInit {
     return this.todoDataService.getAllTodos();
   }
 
-  disabled = true;
 
 }
 
