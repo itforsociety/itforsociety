@@ -11,7 +11,11 @@
             <mat-checkbox class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete"></mat-checkbox>
             <input matInput [readonly]="readonly" value="{{todo.todo_task_name}}" (keyup.enter)="updateTodo(todo)"/>
           </div>
+          
           <div class="example-button-container">
+            <button mat-icon-button class="destroy" (click)="readonly = !readonly" color="primary" aria-label="Example icon button with a menu icon">
+              <mat-icon>fiber_pin</mat-icon>
+            </button>
             <button mat-icon-button class="destroy" (click)="readonly = !readonly" color="primary" aria-label="Example icon button with a menu icon">
               <mat-icon>edit</mat-icon>
             </button>

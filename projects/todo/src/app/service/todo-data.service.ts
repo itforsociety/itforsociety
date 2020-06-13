@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import {Todo} from '../models/todo.model';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
+import {Router} from '@angular/router';
 
 
 @Injectable({
@@ -10,19 +13,38 @@ export class TodoDataService {
   // Placeholder for last todo_task_id so we can simulate
   // automatic incrementing of ids
   lastId: number = 0;
+  add_todo_task = false;
+  todo_task_created = false;
+  serviceErrors:any = {};
 
   // Placeholder for todos
   todos: Todo[] = [];
 
-  constructor() {
+  constructor(private formBuilder: FormBuilder,private http: HttpClient, private router:Router) {
   }
 
   // Simulate POST /todos
   addTodo(todo: Todo): TodoDataService {
-    if (!todo.todo_task_id) {
-      todo.todo_task_id = ++this.lastId;
+    if (!todo.todo_task_complete_f) {
+      todo.todo_task_complete_f = 0;
     }
-    this.todos.push(todo);
+
+    this.add_todo_task = true;
+    console.log("tu sam todo service",todo,this)
+
+      //let data: any= Object.assign({todo_task_name: this.todo_task_name}, this.userForm.value);
+      this.http.post('/api/v1/todo_task', todo).subscribe((todo) =>{
+        
+        let path = '/todo';
+        this.router.navigate([path]);
+      }, error =>
+      {
+        this.serviceErrors = error.error.error;
+      });
+      this.todo_task_created = true;
+  	
+    console.log("tu sam todo service",todo,this)
+    //this.todos.push(todo);
     return this;
   }
 
