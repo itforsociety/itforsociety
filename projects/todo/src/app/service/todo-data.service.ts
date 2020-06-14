@@ -30,20 +30,18 @@ export class TodoDataService {
     }
 
     this.add_todo_task = true;
-    console.log("tu sam todo service",todo,this)
-
       //let data: any= Object.assign({todo_task_name: this.todo_task_name}, this.userForm.value);
-      this.http.post('/api/v1/todo_task', todo).subscribe((todo) =>{
+      this.http.post('/api/v1/todo_task', todo).subscribe((data:any) =>{
         
         let path = '/todo';
         this.router.navigate([path]);
+        this.todos.push(data.todo_task);
       }, error =>
       {
         this.serviceErrors = error.error.error;
       });
       this.todo_task_created = true;
   	
-    console.log("tu sam todo service",todo,this)
     //this.todos.push(todo);
     return this;
   }
