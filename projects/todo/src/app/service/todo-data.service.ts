@@ -63,8 +63,18 @@ export class TodoDataService {
 
   // Simulate DELETE /todos/:todo_task_id
   deleteTodoById(todo_task_id: number): TodoDataService {
-    this.todos = this.todos
-      .filter(todo => todo.todo_task_id !== todo_task_id);
+    
+    this.http.delete('/api/v1/todo_task/' + todo_task_id).subscribe((data:any) =>{
+      this.todos = this.todos
+        .filter(todo => todo.todo_task_id !== todo_task_id);
+      let path = '/todo';
+      this.router.navigate([path]);
+      //values = data.todo_task;
+      //Object.assign(todo, values);
+    }, error =>
+    {
+      this.serviceErrors = error.error.error;
+    });
     return this;
   }
 
@@ -112,11 +122,16 @@ export class TodoDataService {
   }
 
   // Toggle todo complete
-  toggleTodoComplete(todo: Todo){
-    let updatedTodo = this.updateTodo(todo.todo_task_id, {
-      todo_task_complete_f: (todo.todo_task_complete_f == 1) ? 0 : 1
-    });
-    return updatedTodo;
+  toggleTodoComplete(todo, values: Object = {}): Todo {
+    //let todo = this.getTodoById(todo_task_id);
+    if (!todo) {
+      return null;
+    }    
+    todo.todo_task_complete_f = (todo.todo_task_complete_f == 1) ? 0 : 1;
+    
+    this.updateTodo(todo);
+
+    return todo;
   }
 
 }
