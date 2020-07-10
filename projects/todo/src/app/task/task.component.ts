@@ -17,10 +17,12 @@ export class TaskComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.todoDataService.getAllTodos;
+    this.todoDataService.getAll();
   }
 
-
+  getAll() {
+    this.todoDataService.getAll();
+  }
 
   addTodo() {
     this.todoDataService.addTodo(this.newTodo);
@@ -28,7 +30,7 @@ export class TaskComponent implements OnInit {
   }
 
   updateTodo(todo) {
-    this.todoDataService.updateTodoById(todo.todo_task_id);
+    this.todoDataService.updateTodo(todo);
   }
 
   toggleTodoComplete(todo) {

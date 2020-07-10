@@ -9,7 +9,7 @@
         <div class="row-flex">
           <div class="task-name">
             <mat-checkbox class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete"></mat-checkbox>
-            <input matInput [readonly]="readonly" value="{{todo.todo_task_name}}" (keyup.enter)="updateTodo(todo)"/>
+            <input matInput [readonly]="readonly" value="{{todo.todo_task_name}}" [(ngModel)]="todo.todo_task_name" (keyup.enter)="updateTodo(todo);readonly = !readonly;"/>
           </div>
           
           <div class="example-button-container">

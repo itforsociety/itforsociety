@@ -23,6 +23,21 @@ export class TodoDataService {
   constructor(private formBuilder: FormBuilder,private http: HttpClient, private router:Router) {
   }
 
+  getAll(): TodoDataService {
+      //let data: any= Object.assign({todo_task_name: this.todo_task_name}, this.userForm.value);
+      this.http.get('/api/v1/todo_task').subscribe((data:any) =>{
+        let path = '/todo';
+        this.router.navigate([path]);
+        this.todos= data.todos;
+      }, error =>
+      {
+        this.serviceErrors = error.error.error;
+      });
+  	
+    //this.todos.push(todo);
+    return this;
+  }
+
   // Simulate POST /todos
   addTodo(todo: Todo): TodoDataService {
     if (!todo.todo_task_complete_f) {
@@ -54,12 +69,30 @@ export class TodoDataService {
   }
 
   // Simulate PUT /todos/:todo_task_id
-  updateTodoById(todo_task_id: number, values: Object = {}): Todo {
-    let todo = this.getTodoById(todo_task_id);
+  updateTodo(todo, values: Object = {}): Todo {
+    //let todo = this.getTodoById(todo_task_id);
     if (!todo) {
       return null;
     }
-    Object.assign(todo, values);
+    console.log('tu sam update' + todo)
+
+    if (!todo.todo_task_complete_f) {
+      todo.todo_task_complete_f = 0;
+    }
+
+      //let data: any= Object.assign({todo_task_name: this.todo_task_name}, this.userForm.value);
+    this.http.put('/api/v1/todo_task', todo).subscribe((data:any) =>{
+      
+      let path = '/todo';
+      this.router.navigate([path]);
+      values = data.todo_task;
+      Object.assign(todo, values);
+    }, error =>
+    {
+      this.serviceErrors = error.error.error;
+    });
+  	
+    //this.todos.push(todo);
     return todo;
   }
 
@@ -67,6 +100,9 @@ export class TodoDataService {
   getAllTodos(): Todo[] {
     return this.todos;
   }
+
+  
+  
 
   // Simulate GET /todos/:todo_task_id
   getTodoById(todo_task_id: number): Todo {
@@ -77,7 +113,7 @@ export class TodoDataService {
 
   // Toggle todo complete
   toggleTodoComplete(todo: Todo){
-    let updatedTodo = this.updateTodoById(todo.todo_task_id, {
+    let updatedTodo = this.updateTodo(todo.todo_task_id, {
       todo_task_complete_f: (todo.todo_task_complete_f == 1) ? 0 : 1
     });
     return updatedTodo;
