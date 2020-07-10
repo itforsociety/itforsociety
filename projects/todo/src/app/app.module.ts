@@ -47,7 +47,7 @@ export class AppModule { }
 @NgModule({})
 
 export class TodoSharedModule{
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<AppModule> {
     return {
       ngModule: AppModule,
       providers: providers
