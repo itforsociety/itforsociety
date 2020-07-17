@@ -37,6 +37,10 @@ export class TaskComponent implements OnInit {
     this.todoDataService.toggleTodoComplete(todo);
   }
 
+  toggleTodoDate(todo) {
+    this.todoDataService.toggleTodoDate(todo);
+  }
+
   removeTodo(todo) {
     this.todoDataService.deleteTodoById(todo.todo_task_id);
   }

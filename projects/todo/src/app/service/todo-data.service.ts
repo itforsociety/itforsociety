@@ -134,4 +134,17 @@ export class TodoDataService {
     return todo;
   }
 
+  // Toggle todo date
+  toggleTodoDate(todo): Todo {
+    //let todo = this.getTodoById(todo_task_id);
+    console.log("tu samm", todo, todo.todo_task_due_date)
+    if (!todo) {
+      return null;
+    }    
+    
+    this.updateTodo(todo);
+
+    return todo;
+  }
+
 }
