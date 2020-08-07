@@ -13,6 +13,7 @@ import {Routes,RouterModule} from '@angular/router';
 import { TaskComponent } from './task/task.component';
 import { TodoDataService } from './service/todo-data.service';
 import { FormsModule } from '@angular/forms';
+import { FiltersMenuComponent } from './filters-menu/filters-menu.component';
 
 const providers = []
 
@@ -26,7 +27,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    TaskComponent
+    TaskComponent,
+    FiltersMenuComponent
   ],
   imports: [
     BrowserModule,
