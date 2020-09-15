@@ -40,7 +40,7 @@ export class TodoDataService {
 
   getByDates(selectedDate): TodoDataService {
     //let data: any= Object.assign({todo_task_name: this.todo_task_name}, this.userForm.value);
-    this.http.get('/api/v1/todo_task/',selectedDate).subscribe((data:any) =>{
+    this.http.get('/api/v1/todo_task/byDates/'+ selectedDate + '.' + selectedDate).subscribe((data:any) =>{
       let path = '/todo';
       this.router.navigate([path]);
       this.todos= data.todos;

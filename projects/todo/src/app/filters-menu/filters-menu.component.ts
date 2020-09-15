@@ -21,7 +21,7 @@ export class FiltersMenuComponent implements OnInit {
    }
   
   getByDate(day){
-    let selectedDate = moment().day(day).format("YYYYMMDD");
+    let selectedDate = moment().day(day).format("YYYY-MM-DD");
     console.log("tu sam",day, selectedDate)
     this.todoDataService.getByDates(selectedDate);
   }
