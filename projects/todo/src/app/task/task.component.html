@@ -14,6 +14,7 @@
           
           <div class="example-button-container">
               <input matInput class="dateInput" [matDatepicker]="picker" value="{{todo.todo_task_due_date}}" [(ngModel)]="todo.todo_task_due_date" (dateChange)="toggleTodoDate(todo)">
+              <!-- <input matInput class="dateInput" [matDatepicker]="picker" [formControl]="date" value="{{todo.todo_task_due_date}}" [(ngModel)]="todo.todo_task_due_date" (dateChange)="toggleTodoDate(todo)"> -->
               <mat-datepicker-toggle matSuffix  [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
             <button mat-icon-button class="destroy" (click)="readonly = !readonly" color="primary" aria-label="Example icon button with a menu icon">
