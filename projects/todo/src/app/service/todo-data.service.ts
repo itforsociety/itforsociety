@@ -38,6 +38,21 @@ export class TodoDataService {
     return this;
   }
 
+  getByDates(selectedDate): TodoDataService {
+    //let data: any= Object.assign({todo_task_name: this.todo_task_name}, this.userForm.value);
+    this.http.get('/api/v1/todo_task/',selectedDate).subscribe((data:any) =>{
+      let path = '/todo';
+      this.router.navigate([path]);
+      this.todos= data.todos;
+    }, error =>
+    {
+      this.serviceErrors = error.error.error;
+    });
+  
+  //this.todos.push(todo);
+  return this;
+}
+
   // Simulate POST /todos
   addTodo(todo: Todo): TodoDataService {
     if (!todo.todo_task_complete_f) {

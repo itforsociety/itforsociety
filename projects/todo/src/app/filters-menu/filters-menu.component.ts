@@ -1,27 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import * as _moment from 'moment';
+import { TodoDataService } from '../service/todo-data.service';
 
 const moment =  _moment;
 
 @Component({
   selector: 'app-filters-menu',
   templateUrl: './filters-menu.component.html',
-  styleUrls: ['./filters-menu.component.scss']
+  styleUrls: ['./filters-menu.component.scss'],
+  providers: [
+    TodoDataService
+  ]
 })
 export class FiltersMenuComponent implements OnInit {
+  today = moment().format('dddd');
+  daysOfTheWeek: string[] = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday'];
 
-  constructor() {
+  constructor(private todoDataService : TodoDataService) {
+    
    }
   
-  today = moment().format('dddd');
-   //console.log(day);
-  selectDay(event: Event) {
-    this.today = (event.target as HTMLSelectElement).value;
+  getByDate(day){
+    let selectedDate = moment().day(day).format("YYYYMMDD");
+    console.log("tu sam",day, selectedDate)
+    this.todoDataService.getByDates(selectedDate);
   }
-
-  daysOfTheWeek: string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday','Sunday'];
-
+  
+  
   ngOnInit(): void {
+    console.log(moment().day(this.today))
   }
 
 }

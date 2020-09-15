@@ -1,6 +1,6 @@
 <mat-card class="filters-mat-card">
-  <mat-selection-list class="filters-selection-list" #days [multiple]="false" [(ngModel)]="today">
-    <mat-list-option class="filters-list-option" *ngFor="let day of daysOfTheWeek"  [value]="day" >
+  <mat-selection-list class="filters-selection-list" #days [multiple]="false" >
+    <mat-list-option class="filters-list-option" *ngFor="let day of daysOfTheWeek" [selected]="today==day?true:false" [value]="day" (click)="getByDate(day)" >
       <p class="filters-badge-space">
         <span matBadgeColor="secondary" matBadge="4" matBadgeOverlap="false">{{day}}</span>
       </p>
@@ -8,6 +8,6 @@
   </mat-selection-list>
   
   <p>
-    Option selected: {{today}} {{days.selectedOptions.selected[0]?.value}}
+    Option selected: {{days.selectedOptions.selected[0]?.value}}
   </p>
 </mat-card>    
