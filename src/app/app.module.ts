@@ -19,6 +19,7 @@ import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 import { FooterComponent } from './footer/footer.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { HeaderComponent } from './header/header.component';
+import { StoriesComponent } from './stories/stories.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'stories',
+    component: StoriesComponent
   },
   {
     path: 'registration',
@@ -51,7 +56,8 @@ const routes: Routes = [
     DisplayUserDataComponent,
     FooterComponent,
     QuotesComponent,
-    HeaderComponent
+    HeaderComponent,
+    StoriesComponent
   ],
   imports: [
     BrowserModule,

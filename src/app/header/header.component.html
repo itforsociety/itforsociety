@@ -4,12 +4,8 @@
 
     <a mat-button id="matButton1" class="matButton" routerLink="/home">Home</a>
     
-    <button mat-button id="matButton2" class="matButton" [matMenuTriggerFor]="belowMenu2">Stories</button>
-    <mat-menu #belowMenu2="matMenu" yPosition="below">
-        <button mat-menu-item>about</button>
-        <button mat-menu-item>Item 2</button>
-    </mat-menu>
-
+    <a mat-button id="matButton2" class="matButton" routerLink="/stories">Stories</a>
+    
     <a mat-button id="matButton3" class="matButton" routerLink="/todo">Todo</a>
     <span class="fill-remaining-space"></span>
     
