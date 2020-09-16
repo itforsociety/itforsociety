@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'todo',
     component: AppComponent
+  },
+  {
+    path: 'todo/byDate/:dateFrom/:dateTo',
+    component: AppComponent
   }
 ]
 

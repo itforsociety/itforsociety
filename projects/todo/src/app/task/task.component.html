@@ -4,7 +4,7 @@
     <input matInput placeholder="Ex. Clean the house" [(ngModel)]="newTodo.todo_task_name" (keyup.enter)="addTodo()">
   </mat-form-field>
   <div class="main" *ngIf="todos.length > 0">
-    <mat-list #tasks>
+    <mat-list #tasks >
       <mat-list-item *ngFor="let todo of todos" [class.completed]="todo.todo_task_complete_f">
         <div class="row-flex">
           <div class="task-name">

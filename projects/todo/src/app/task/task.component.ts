@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import {Todo} from '../models/todo.model';
 import {TodoDataService} from '../service/todo-data.service';
 import {FormControl} from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import {MomentDateAdapter, MAT_MOMENT_DATE_FORMATS} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 // Depending on whether rollup is used, moment needs to be imported differently.
@@ -12,6 +13,7 @@ import * as _moment from 'moment';
 // tslint:disable-next-line:no-duplicate-imports
 //import {default as _rollupMoment} from 'moment';
 const moment =  _moment /* || _rollupMoment*/;
+import { Subscription } from 'rxjs';
 
 // See the Moment.js docs for the meaning of these formats:
 // https://momentjs.com/docs/#/displaying/format/
@@ -41,17 +43,45 @@ export class TaskComponent implements OnInit {
 
   newTodo: Todo = new Todo();  
   readonly = true;
+  today = moment().format("YYYY-MM-DD");
+  private sub: any;
+  dateFrom = null;
+  subscription: Subscription;
+  //@Input() todos: Todo[] = [];
 
-  constructor(private todoDataService: TodoDataService) {
+  constructor(private todoDataService: TodoDataService, private route: ActivatedRoute) {
+     this.sub = this.route.paramMap.subscribe(params => {
+      this.dateFrom = params.get('dateFrom'); 
+      console.log("tu sam date param",this.dateFrom, params);
+      if(this.dateFrom == null){
+        this.todoDataService.getAll();
+      }
+      else{
+        this.todoDataService.getByDates(this.dateFrom);
+      } 
+   });
+   
   }
+  
 
   ngOnInit(): void {
-    this.todoDataService.getAll();
+    //this.todoDataService.getAll();
+    //console.log(this.dateFrom)
+    /* if(this.dateFrom == null || this.dateFrom == ""){
+      this.todoDataService.getAll();
+    }
+    else{
+      this.todoDataService.getByDates(this.dateFrom);
+    } */
   }
 
   getAll() {
     this.todoDataService.getAll();
   }
+
+/*   getByDates(selectedDate){
+    this.todoDataService.getByDates(selectedDate);
+  } */
 
   addTodo() {
     this.todoDataService.addTodo(this.newTodo);
@@ -77,10 +107,7 @@ export class TaskComponent implements OnInit {
   get todos() {
     return this.todoDataService.getAllTodos();
   }
-
-  // Datepicker takes `Moment` objects instead of `Date` objects.
-  //date = new FormControl(moment());
-
-
+  
+  
 }
 

@@ -3,6 +3,8 @@ import {Todo} from '../models/todo.model';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
+import * as _moment from 'moment';
+const moment =  _moment
 
 
 @Injectable({
@@ -19,6 +21,7 @@ export class TodoDataService {
 
   // Placeholder for todos
   todos: Todo[] = [];
+  today = moment().format("YYYY-MM-DD");
 
   constructor(private formBuilder: FormBuilder,private http: HttpClient, private router:Router) {
   }
@@ -41,9 +44,11 @@ export class TodoDataService {
   getByDates(selectedDate): TodoDataService {
     //let data: any= Object.assign({todo_task_name: this.todo_task_name}, this.userForm.value);
     this.http.get('/api/v1/todo_task/byDates/'+ selectedDate + '.' + selectedDate).subscribe((data:any) =>{
-      let path = '/todo';
-      this.router.navigate([path]);
+      let path = 'todo/byDate/'+ selectedDate + '/' + selectedDate;
       this.todos= data.todos;
+      this.today = selectedDate;
+      console.log("tu sam",this.todos)
+      this.router.navigate([path]);
     }, error =>
     {
       this.serviceErrors = error.error.error;
@@ -111,23 +116,21 @@ export class TodoDataService {
       let path = '/todo';
       this.router.navigate([path]);
       values = data.todo_task;
-      Object.assign(todo, values);
+      //Object.assign(todo, values);
     }, error =>
     {
       this.serviceErrors = error.error.error;
     });
   	
     //this.todos.push(todo);
-    return todo;
+    //return todo;
   }
 
   // Simulate GET /todos
   getAllTodos(): Todo[] {
     return this.todos;
   }
-
-  
-  
+    
 
   // Simulate GET /todos/:todo_task_id
   getTodoById(todo_task_id: number): Todo {
