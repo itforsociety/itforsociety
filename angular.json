@@ -89,8 +89,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
-            ],
+            "styles": [],
             "scripts": []
           }
         },
@@ -118,6 +117,10 @@
               "devServerTarget": "ITforSociety:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },

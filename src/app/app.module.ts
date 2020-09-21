@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { HeaderComponent } from './header/header.component';
 import { StoriesComponent } from './stories/stories.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 const routes: Routes = [
   {
@@ -57,7 +58,8 @@ const routes: Routes = [
     FooterComponent,
     QuotesComponent,
     HeaderComponent,
-    StoriesComponent
+    StoriesComponent,
+    ComingSoonComponent
   ],
   imports: [
     BrowserModule,

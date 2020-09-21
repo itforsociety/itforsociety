@@ -5,12 +5,38 @@
   <title>ITforSociety</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/IT for society circle.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link id="themeAsset" rel="stylesheet" href="./assets/css/my-pink-bluegrey.css">
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyBAMLIxhXMsaaicSMY_tQB8yT9Dy0y7H6k",
+      authDomain: "itforsociety-53a21.firebaseapp.com",
+      databaseURL: "https://itforsociety-53a21.firebaseio.com",
+      projectId: "itforsociety-53a21",
+      storageBucket: "itforsociety-53a21.appspot.com",
+      messagingSenderId: "924606495288",
+      appId: "1:924606495288:web:4505ff8d4ede7b85b7c4cd",
+      measurementId: "G-0KYRY6642K"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
 </body>
 </html>

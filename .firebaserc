@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "itforsociety-53a21"
+  },
+  "targets": {
+    "itforsociety-53a21": {
+      "hosting": {
+        "ITforSociety": [
+          "itforsociety-53a21"
+        ]
+      }
+    }
+  }
+}
