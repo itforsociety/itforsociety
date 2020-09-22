@@ -1,29 +1,43 @@
  /*using full height minus header size */
 
 
- #example-cards{
+ #story-cards{
 
 }
-.example-card {
-  max-width: 350px;
-  padding-top: 2px;
-}
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+.story-header-image {
+  background-image: url('../../assets/IT for society circle.png');
   background-size: cover;
 }
 
-.mat-grid-tile{
-  padding-top: 2px;
+.story-image {
+  background-image: url(https://material.angular.io/assets/img/examples/shiba1.jpg);
+  background-size: cover;
+  width: 98%;
+  height: 300px;
 }
+
+.story-content-text{
+    max-height: 100px;
+    overflow: hidden;
+    margin-top: 10px;
+    text-overflow: ellipsis;
+}
+
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
 
 @media (min-width: 1240px) {
-  .featurette-heading {
-    margin-top: 7rem;
+  .story-card {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .story-image{
+    height: 175px;
   }
 }
 

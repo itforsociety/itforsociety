@@ -1,16 +1,16 @@
 <mat-card id="content" class="body-card">
-    <!-- <img class="cardImage" mat-card-image src="../assets/maldivi sunset.png"> -->
-    <div id="example-cards" class="container">
-      <mat-grid-list [cols]="numberOfColumns" rowHeight="1:1.5" (window:resize)="onResize($event)">
+    <!-- <img class="cardImadiv src="../assets/maldivi sunset.png"> -->
+    <div id="story-cards" class="container">
+      <mat-grid-list [cols]="numberOfColumns" [rowHeight]="rowHeight" (window:resize)="onResize($event)">
         <mat-grid-tile>
-          <mat-card class="example-card" color="accent">
+          <mat-card class="story-card" color="accent">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="story-header-image"></div>
             <mat-card-title>Child Protection Information Management System (CPIMS)</mat-card-title>
             <mat-card-subtitle>Primero</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="../../assets/primero.PNG" alt="Photo of primero.org">
-          <mat-card-content>
+          <div class="story-image" alt="Photo of primero.org"></div>
+          <mat-card-content class="story-content-text">
             <p>
                 As of May 2018, 68.5 million people around the world have been forcibly displaced from their homes due to armed conflict and natural disaster.  🌪🔥💔
                 Of these, 25.4 million are refugees, and more than 50 percent are children 🙅‍♀️🙅🙇‍♀️🙇‍♂️
@@ -22,16 +22,18 @@
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
           </mat-card-actions>
-        </mat-card></mat-grid-tile>
+        </mat-card>
+        </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card class="example-card">
+          <mat-card class="story-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="story-header-image"></div>
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-content>
+          <div class="story-image"></div>
+          <!-- <div class="story-image" alt="Photo of a Shiba Inu"><div> -->
+          <mat-card-content class="story-content-text">
             <p>
               The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
               A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
@@ -42,16 +44,17 @@
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
           </mat-card-actions>
-        </mat-card></mat-grid-tile>
+        </mat-card>
+        </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card class="example-card">
+          <mat-card class="story-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="story-header-image"></div>
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-content>
+          <div class="story-image" alt="Photo of a Shiba Inu"></div>
+          <mat-card-content class="story-content-text">
             <p>
               The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
               A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
@@ -62,16 +65,17 @@
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
           </mat-card-actions>
-        </mat-card></mat-grid-tile>
+        </mat-card>
+        </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card class="example-card">
+          <mat-card class="story-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="story-header-image"></div>
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-content>
+          <div class="story-image" alt="Photo of a Shiba Inu"></div>
+          <mat-card-content class="story-content-text">
             <p>
               The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
               A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
@@ -82,16 +86,17 @@
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
           </mat-card-actions>
-        </mat-card></mat-grid-tile>
+        </mat-card>
+        </mat-grid-tile>
         <mat-grid-tile>
-          <mat-card class="example-card">
+          <mat-card class="story-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="story-header-image"></div>
             <mat-card-title>Shiba Inu</mat-card-title>
             <mat-card-subtitle>Dog Breed</mat-card-subtitle>
           </mat-card-header>
-          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-          <mat-card-content>
+          <div class="story-image" class="story-image" alt="Photo of a Shiba Inu"></div>
+          <mat-card-content class="story-content-text">
             <p>
               The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
               A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
@@ -102,7 +107,8 @@
             <button mat-button>LIKE</button>
             <button mat-button>SHARE</button>
           </mat-card-actions>
-        </mat-card></mat-grid-tile>
+        </mat-card>
+        </mat-grid-tile>
       </mat-grid-list>
       
     </div>

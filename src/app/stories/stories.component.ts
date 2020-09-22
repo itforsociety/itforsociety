@@ -10,16 +10,20 @@ export class StoriesComponent implements OnInit {
   constructor() { }
 
   numberOfColumns: number = 3;
+  rowHeight: string = '1:1.5';
 
   ngOnInit(): void {
-    if(window.innerWidth <= 1240){
-      this.numberOfColumns = 2;
+    if(window.innerWidth <= 700){
+      this.numberOfColumns = 1;
+      this.rowHeight = '1:1.2';
     }
-    else if(window.innerWidth <= 700){
-      this.numberOfColumns = 1
+    else if(window.innerWidth <= 1240){
+      this.numberOfColumns = 2;
+      this.rowHeight = '1:1.5';
     }
     else{
       this.numberOfColumns = 3
+      this.rowHeight = '1:1.3';
     }
   }
 
@@ -27,12 +31,15 @@ export class StoriesComponent implements OnInit {
     
     if(event.target.innerWidth <= 750){
       this.numberOfColumns = 1;
+      this.rowHeight = '1:1.2';
     }
     else if(event.target.innerWidth <= 1240){
-      this.numberOfColumns = 2
+      this.numberOfColumns = 2;
+      this.rowHeight = '1:1.5';
     }
     else{
-      this.numberOfColumns = 3
+      this.numberOfColumns = 3;
+      this.rowHeight = '1:1.3';
     }
     //this.numberOfColumns = (event.target.innerWidth <= 1240) ? 1 : 3;
   }
