@@ -10,6 +10,10 @@
   background-size: cover;
 }
 
+.story-header{
+  height: 70px;
+}
+
 .story-image {
   background-image: url(https://material.angular.io/assets/img/examples/shiba1.jpg);
   background-size: cover;
@@ -18,7 +22,7 @@
 }
 
 .story-content-text{
-    max-height: 100px;
+    height: 100px;
     overflow: hidden;
     margin-top: 10px;
     text-overflow: ellipsis;
