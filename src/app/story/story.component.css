@@ -10,8 +10,18 @@
     }
 }
 
+.story-header-image {
+    background-size: cover;
+    background-position: center;
+  }
+
 .story-image{
     width: 100%;
     height: auto;
+}
+
+.story-image-wrapper{
+    max-height: 500px;
+    overflow: hidden;
 }
 

@@ -6,7 +6,9 @@
             <mat-card-title>{{story.story_title}}</mat-card-title>
             <mat-card-subtitle>{{story.story_subtitle}}</mat-card-subtitle>
             </mat-card-header>
-            <img class="story-image" alt="Photo of primero.org" src="{{story.story_image}}">
+            <div class="story-image-wrapper">
+                <img class="story-image" alt="Photo of primero.org" src="{{story.story_image}}">
+            </div>
             <mat-card-content class="story-content-text">
             <p>
                 {{story.story_content}}
