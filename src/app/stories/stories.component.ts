@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Story} from '../models/story.model' 
+import { StoriesService } from '../services/stories.service';
 
 @Component({
   selector: 'app-stories',
@@ -8,24 +9,17 @@ import {Story} from '../models/story.model'
 })
 export class StoriesComponent implements OnInit {
 
-  story: Story = new Story ({
-    story_id: 1,
-    story_title: 'Child Protection Information Management System (CPIMS)',
-    story_subtitle: 'Primero',
-    story_avatar: '../../assets/IT for society circle.png',
-    story_image: '../../assets/IT for society circle.png',
-    story_content: 'As of May 2018, 68.5 million people around the world have been forcibly displaced from their homes due to armed conflict and natural disaster.  🌪🔥💔'+
-    'Of these, 25.4 million are refugees, and more than 50 percent are children 🙅‍♀️🙅🙇‍♀️🙇‍♂️'+
-    'For helping missing people International Rescue Committee , Save the Children UK and UNICEF developed child protection information management system (CPIMS). 👨‍👩‍👦👨‍👩‍👧👨‍👩‍👧‍👦'+
-    'To know more about Primero visit primero.org '
-  });
+ 
 
-  constructor() { }
+  constructor(private storiesService: StoriesService) {
+  }
 
   numberOfColumns: number = 3;
   rowHeight: string = '1:1.5';
+  stories: Story[];
 
   ngOnInit(): void {
+    this.stories = this.storiesService.getAllStories();
     if(window.innerWidth <= 700){
       this.numberOfColumns = 1;
       this.rowHeight = '1:1.2';

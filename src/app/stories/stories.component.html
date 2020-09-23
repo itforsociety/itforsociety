@@ -2,107 +2,23 @@
     <!-- <img class="cardImadiv src="../assets/maldivi sunset.png"> -->
     <div id="story-cards" class="container">
       <mat-grid-list [cols]="numberOfColumns" [rowHeight]="rowHeight" (window:resize)="onResize($event)">
-        <mat-grid-tile>
+        <mat-grid-tile  *ngFor="let story of stories">
           <mat-card class="story-card" color="accent">
-          <mat-card-header class="story-header">
-            <div mat-card-avatar class="story-header-image"></div>
-            <mat-card-title>Child Protection Information Management System (CPIMS)</mat-card-title>
-            <mat-card-subtitle>Primero</mat-card-subtitle>
-          </mat-card-header>
-          <div class="story-image" alt="Photo of primero.org"></div>
-          <mat-card-content class="story-content-text">
-            <p>
-                As of May 2018, 68.5 million people around the world have been forcibly displaced from their homes due to armed conflict and natural disaster.  🌪🔥💔
-                Of these, 25.4 million are refugees, and more than 50 percent are children 🙅‍♀️🙅🙇‍♀️🙇‍♂️
-                For helping missing people International Rescue Committee , Save the Children UK and UNICEF developed child protection information management system (CPIMS). 👨‍👩‍👦👨‍👩‍👧👨‍👩‍👧‍👦
-                To know more about Primero visit primero.org 
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>READ MORE</button>
-          </mat-card-actions>
-        </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card class="story-card">
-          <mat-card-header class="story-header">
-            <div mat-card-avatar class="story-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <div class="story-image"></div>
-          <!-- <div class="story-image" alt="Photo of a Shiba Inu"><div> -->
-          <mat-card-content class="story-content-text">
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>READ MORE</button>
-          </mat-card-actions>
-        </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card class="story-card">
-          <mat-card-header class="story-header">
-            <div mat-card-avatar class="story-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <div class="story-image" alt="Photo of a Shiba Inu"></div>
-          <mat-card-content class="story-content-text">
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>READ MORE</button>
-          </mat-card-actions>
-        </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card class="story-card">
-          <mat-card-header class="story-header">
-            <div mat-card-avatar class="story-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <div class="story-image" alt="Photo of a Shiba Inu"></div>
-          <mat-card-content class="story-content-text">
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>READ MORE</button>
-          </mat-card-actions>
-        </mat-card>
-        </mat-grid-tile>
-        <mat-grid-tile>
-          <mat-card class="story-card">
-          <mat-card-header class="story-header">
-            <div mat-card-avatar class="story-header-image"></div>
-            <mat-card-title>Shiba Inu</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-          </mat-card-header>
-          <div class="story-image" class="story-image" alt="Photo of a Shiba Inu"></div>
-          <mat-card-content class="story-content-text">
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>READ MORE</button>
-          </mat-card-actions>
-        </mat-card>
+            <mat-card-header class="story-header">
+              <div mat-card-avatar class="story-header-image" style="background-image: url('{{story.story_avatar}}');"></div>
+              <mat-card-title>{{story.story_title}}</mat-card-title>
+              <mat-card-subtitle>{{story.story_subtitle}}</mat-card-subtitle>
+            </mat-card-header>
+            <div class="story-image" alt="Photo of primero.org" style="background-image: url('{{story.story_image}}');"></div>
+            <mat-card-content class="story-content-text">
+              <p>
+                {{story.story_content}}
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <a mat-button routerLink="/story/{{story.story_id}}">READ MORE</a>
+            </mat-card-actions>
+          </mat-card>
         </mat-grid-tile>
       </mat-grid-list>
       

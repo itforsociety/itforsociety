@@ -1,0 +1,17 @@
+.story-container {
+    margin: 0 auto;
+    width: 60%;
+}
+
+@media (max-width: 1080px) {
+    .story-container {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.story-image{
+    width: 100%;
+    height: auto;
+}
+

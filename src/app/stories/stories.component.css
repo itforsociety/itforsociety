@@ -6,8 +6,8 @@
 }
 
 .story-header-image {
-  background-image: url('../../assets/IT for society circle.png');
   background-size: cover;
+  background-position: center;
 }
 
 .story-header{
@@ -17,6 +17,7 @@
 .story-image {
   background-image: url(https://material.angular.io/assets/img/examples/shiba1.jpg);
   background-size: cover;
+  background-position: center;
   width: 98%;
   height: 300px;
 }

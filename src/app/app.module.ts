@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { HeaderComponent } from './header/header.component';
 import { StoriesComponent } from './stories/stories.component';
+import {StoryComponent} from './story/story.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 const routes: Routes = [
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'stories',
     component: StoriesComponent
+  },
+  {
+    path: 'story/:story_id',
+    component: StoryComponent
   },
   {
     path: 'registration',
@@ -59,6 +64,7 @@ const routes: Routes = [
     QuotesComponent,
     HeaderComponent,
     StoriesComponent,
+    StoryComponent,
     ComingSoonComponent
   ],
   imports: [
