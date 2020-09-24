@@ -9,7 +9,13 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
+  numberOfColumns: number = 2;
+  rowHeight: string = '1:1.5';
+
+
   ngOnInit(): void {
+   
   }
 
+ 
 }
