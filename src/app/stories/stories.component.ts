@@ -20,11 +20,15 @@ export class StoriesComponent implements OnInit {
 
   ngOnInit(): void {
     this.stories = this.storiesService.getAllStories();
-    if(window.innerWidth <= 700){
+    if(window.innerWidth <= 400){
+      this.numberOfColumns = 1;
+      this.rowHeight = '1:1.4';
+    }
+    else if(window.innerWidth <= 800){
       this.numberOfColumns = 1;
       this.rowHeight = '1:1.2';
     }
-    else if(window.innerWidth <= 1240){
+    else if(window.innerWidth <= 1300){
       this.numberOfColumns = 2;
       this.rowHeight = '1:1.5';
     }
@@ -36,11 +40,15 @@ export class StoriesComponent implements OnInit {
 
   onResize(event) {
     
-    if(event.target.innerWidth <= 750){
+    if(window.innerWidth <= 400){
+      this.numberOfColumns = 1;
+      this.rowHeight = '1:1.4';
+    }
+    else if(window.innerWidth <= 800){
       this.numberOfColumns = 1;
       this.rowHeight = '1:1.2';
     }
-    else if(event.target.innerWidth <= 1240){
+    else if(event.target.innerWidth <= 1300){
       this.numberOfColumns = 2;
       this.rowHeight = '1:1.5';
     }

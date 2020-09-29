@@ -34,7 +34,7 @@
 -------------------------------------------------- */
 
 
-@media (min-width: 1240px) {
+@media (min-width: 1300px) {
   .story-card {
     max-width: 500px;
   }
@@ -43,6 +43,9 @@
 @media (max-width: 500px) {
   .story-image{
     height: 175px;
+  }
+  .mat-card-title{
+    font-size: 16px;
   }
 }
 
