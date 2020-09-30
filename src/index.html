@@ -46,5 +46,39 @@
   
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=441659765953427&autoLogAppEvents=1" nonce="b7T4UhqU"></script>
+  
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="../../assets/js/jquery.tmpl.min.js"></script>
+  <script type="text/javascript" src="../../assets/js/jquery.slideshow.js"></script>
+  
+  <script id="barTmpl" type="text/x-jquery-tmpl">
+    <div class="cn-bar">
+        <div class="cn-nav">
+  <a href="#" class="cn-nav-prev">
+                <span>Previous</span>
+    <div style="background-image:url(${prevSource});"></div> 
+  </a>
+  <a href="#" class="cn-nav-next">
+                <span>Next</span>
+    <div style="background-image:url(${nextSource});"></div>
+  </a>
+        </div><!-- cn-nav -->
+        <div class="cn-nav-content">
+            <div class="cn-nav-content-prev">
+                <span>Previous image</span>
+                <h3>${prevTitle}</h3>
+            </div>
+            <div class="cn-nav-content-current">
+                <span>Currently viewing</span>
+                <h2>${currentTitle}</h2>
+            </div>
+            <div class="cn-nav-content-next">
+                <span>Next image</span>
+                <h3>${nextTitle}</h3>
+            </div>
+        </div><!-- cn-nav-content -->
+    </div><!-- cn-bar -->
+</script>
 </body>
 </html>
