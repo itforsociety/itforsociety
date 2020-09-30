@@ -24,6 +24,11 @@ export class HomeComponent implements OnInit {
       imageID: 3,
       imageURL: "../../assets/slideshow/large/3.jpg",
       imageThumbURL: "../../assets/slideshow/thumbs/3.jpg"
+    },
+    {
+      imageID: 45,
+      imageURL: "../../assets/slideshow/large/4.jpg",
+      imageThumbURL: "../../assets/slideshow/thumbs/4.jpg"
     }
   ]
   firstImage = this.images[0];
@@ -42,7 +47,6 @@ export class HomeComponent implements OnInit {
     let index = this.images.findIndex(function(item, i){
       return item.imageID === imageID
     });
-    
     //if it's last image get the first one.
     if (index + 1 == this.images.length){
       this.selectedImage = this.firstImage;
@@ -52,14 +56,17 @@ export class HomeComponent implements OnInit {
     }
 
     
-    if (index == this.images.length - 2){
-      this.nextImage = this.firstImage;
-    }
-    else if (index == this.images.length - 1){
+    if (index == this.images.length - 1){
       this.nextImage = this.images[1];
+      this.previousImage = this.lastImage;
+    }
+    else if (index == this.images.length - 2){
+      this.nextImage = this.firstImage;
+      this.previousImage = this.images[this.images.length - 2];
     }
     else{
       this.nextImage = this.images[index + 2];
+      this.previousImage = this.images[index]
     }
   }
 
@@ -77,12 +84,15 @@ export class HomeComponent implements OnInit {
 
     if (index == 0){
       this.previousImage = this.images[this.images.length - 2];
+      this.nextImage = this.firstImage;
     }
     else if (index == 1){
       this.previousImage = this.lastImage;
+      this.nextImage = this.images[1];
     }
     else{
       this.previousImage = this.images[index-2];
+      this.nextImage = this.images[index];
     }
   }
 

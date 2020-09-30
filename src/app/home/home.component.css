@@ -1,9 +1,24 @@
     /* START slideshow */
    
+    .content-middle{
+      display: flex;
+      justify-content: center;
+      height: 500px;
+    }
+    .content-middle-item{
+      width: 200px;
+      height: 300px;
+    }
+    
     
     .slideshow-image{
       width: 100%;
       height: auto;
+      -webkit-transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      transition: all 0.4s ease;
     }
     
     .cn-nav > a{
@@ -35,10 +50,10 @@
       background-size: 17px 25px;
       margin: -23px 0 0 -23px;
       -webkit-transition: all 0.4s ease;
-    -moz-transition: all 0.4s ease;
-    -o-transition: all 0.4s ease;
-    -ms-transition: all 0.4s ease;
-    transition: all 0.4s ease;
+      -moz-transition: all 0.4s ease;
+      -o-transition: all 0.4s ease;
+      -ms-transition: all 0.4s ease;
+      transition: all 0.4s ease;
     }
     .cn-nav a.cn-nav-prev span{
       background: #666 url(../../assets/slideshow/prev.png) no-repeat center center;

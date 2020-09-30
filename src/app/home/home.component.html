@@ -1,19 +1,30 @@
 <div id="content" >
 
-<div class="slideshow">
+  <div class="slideshow">
     <img class="slideshow-image" src="{{selectedImage.imageURL}}">
-  <div class="cn-nav">
-    <a class="cn-nav-prev" (click)="previousSlide(selectedImage.imageID)">
-      <span>Previous</span>
-      <div style="background-image:url({{previousImage.imageThumbURL}});"></div> 
-    </a>
-    <a class="cn-nav-next" (click)="nextSlide(selectedImage.imageID)">
-      <span>Next</span>
-      <div style="background-image:url({{nextImage.imageThumbURL}});" ></div>
-    </a>
+    <div class="cn-nav">
+      <a class="cn-nav-prev" (click)="previousSlide(selectedImage.imageID)">
+        <span>Previous</span>
+        <div style="background-image:url({{previousImage.imageThumbURL}});"></div> 
+      </a>
+      <a class="cn-nav-next" (click)="nextSlide(selectedImage.imageID)">
+        <span>Next</span>
+        <div style="background-image:url({{nextImage.imageThumbURL}});" ></div>
+      </a>
+    </div>
   </div>
 
-</div>
+  <mat-card class="content-middle">
+    <mat-card class="content-middle-item">
+      
+    </mat-card>
+    <mat-card class="content-middle-item">
+      
+    </mat-card>
+    <mat-card class="content-middle-item">
+      
+    </mat-card>
+  </mat-card>
     
     
 </div>
