@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-header',
@@ -22,13 +24,16 @@ export class HeaderComponent implements OnInit {
 
   darkMode(){
     var elemCSS =  document.getElementById('themeAsset');
+    console.log(this.darkThemeName);
     if (this.darkModeChecked){
-      console.log(this.darkThemeName)
+      localStorage.setItem("themeAsset", "dark");
       elemCSS.setAttribute ('href','../assets/css/' + this.darkThemeName + '.css');
     }
     else{
       elemCSS.setAttribute ('href','../assets/css/' + this.lightThemeName + '.css');
+      localStorage.setItem("themeAsset", "light");
     }
+    $("#themeAsset").trigger("change");
   }
 
 }

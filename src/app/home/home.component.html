@@ -1,30 +1,53 @@
 <div class="content" >
 
-  <div class="slideshow">
-    <img class="slideshow-image" src="{{selectedImage.imageURL}}">
-    <div class="cn-nav">
-      <a class="cn-nav-prev" (click)="previousSlide(selectedImage.imageID)">
-        <span>Previous</span>
-        <div style="background-image:url({{previousImage.imageThumbURL}});"></div> 
-      </a>
-      <a class="cn-nav-next" (click)="nextSlide(selectedImage.imageID)">
-        <span>Next</span>
-        <div style="background-image:url({{nextImage.imageThumbURL}});" ></div>
-      </a>
-    </div>
-  </div>
-
-  <mat-card class="content-middle">
+  <mat-card class="content-middle-first">
     <div class="flex-center">
-      <img src="../../assets/IT for society transparent inverted.png">
+      <img class="first-image ITsImage" src="{{ITsImageURL}}">
     </div>
     <div class="flex-center">
-      neki text koji ce biti kriv
+      <p class="content-middle-text">
+        we are here to use technology for positive impact on society
+      </p>
     </div>
   </mat-card>
   <mat-card class="content-middle">
+    <div class="flex-center">
+      <img src="../../assets/IT for society circle.png">
+    </div>
+    <div class="flex-center">
+      <p class="content-middle-text">
+        to share praisworthy stories about tech for good and more
+      </p>
+    </div>
+    <div class="flex-center">
+      <a mat-button routerLink="/stories">READ MORE</a>
+    </div>
   </mat-card>
   <mat-card class="content-middle">
+    <div class="flex-center">
+      <img src="../../assets/SDG/E_SDG_logo_without_UN_emblem_Square_Transparent_WEB.png">
+    </div>
+    <div class="flex-center">
+      <p class="content-middle-text">
+        to support sustainable development goals
+      </p>
+    </div>    
+    <div class="flex-center">
+      <a mat-button routerLink="/story/1">READ MORE</a>
+    </div>
+  </mat-card>
+  <mat-card class="content-middle">
+    <div class="flex-center">
+      <img class="ITsImage" src="../../assets/IT for society transparent inverted.png">
+    </div>
+    <div class="flex-center">
+      <p class="content-middle-text">
+        to help you build apps for good and transform your business
+      </p>
+    </div>
+    <div class="flex-center">
+      <a mat-button routerLink="/stories">CONTACT US</a>
+    </div>
   </mat-card>
     
     
