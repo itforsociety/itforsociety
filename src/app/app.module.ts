@@ -22,6 +22,7 @@ import { HeaderComponent } from './header/header.component';
 import { StoriesComponent } from './stories/stories.component';
 import {StoryComponent} from './story/story.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
 
 const routes: Routes = [
   {
@@ -37,7 +38,11 @@ const routes: Routes = [
     component: StoriesComponent
   },
   {
-    path: 'story/:story_id',
+    path: 'contact',
+    component: ContactFormComponent
+  },
+  {
+    path: 'story/:story_id/:story_title',
     component: StoryComponent
   },
   {
@@ -65,7 +70,8 @@ const routes: Routes = [
     HeaderComponent,
     StoriesComponent,
     StoryComponent,
-    ComingSoonComponent
+    ComingSoonComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +83,9 @@ const routes: Routes = [
     MaterialModule,
     MatNativeDateModule,
     TodoSharedModule.forRoot(),
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled', // Add options right here
+    })
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },

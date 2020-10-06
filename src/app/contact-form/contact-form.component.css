@@ -1,0 +1,17 @@
+.contact-form {
+    min-width: 150px;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .contact-full-width {
+    width: 100%;
+  }
+  .contact-name{
+    min-width: 50px;
+  }
+
+  .contact-message{
+    height: 400px;
+  }

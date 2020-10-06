@@ -22,6 +22,7 @@
   width: 100%;
   padding: 0%;
   border-radius: initial !important;
+  box-shadow: none;
 }
 .content-middle-text{
   font-size: 18px;
@@ -49,6 +50,9 @@
   .first-image {
     width: 200px;
     margin-top: 35%;
+  }
+  .content-middle {
+    height: 80%;
   }
 
 }

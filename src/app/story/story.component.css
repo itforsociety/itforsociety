@@ -1,6 +1,7 @@
 .story-container {
     margin: 0 auto;
     width: 60%;
+    max-width: 1080px;
 }
 
 @media (max-width: 1080px) {
