@@ -1,5 +1,6 @@
 export class Story {
     story_id: number;
+    story_custom: boolean;
 	
 	story_title: string;
 	story_subtitle: string;

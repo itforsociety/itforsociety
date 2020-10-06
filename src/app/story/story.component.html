@@ -10,9 +10,12 @@
                 <img class="story-image" alt="Photo of primero.org" src="{{story.story_image}}">
             </div>
             <mat-card-content class="story-content-text">
-            <p>
-                {{story.story_content}}
-            </p>
+                <p *ngIf="!story.story_custom">
+                  {{story.story_content}}
+                </p>
+                <p *ngIf="story.story_id == 1">
+                  hey
+                </p>
             </mat-card-content>
             <mat-card-actions>
                 <button mat-button routerLink="/stories">GO BACK</button>
