@@ -13,9 +13,43 @@
                 <p *ngIf="!story.story_custom">
                   {{story.story_content}}
                 </p>
-                <p *ngIf="story.story_id == 1">
-                  hey
-                </p>
+                <div *ngIf="story.story_id == 1">
+                    <p >
+                        Sustainable Development Goals (SDGs) are the blueprint to achieve a better and more sustainable future for all. After concluding <a href="https://www.un.org/millenniumgoals/">Millenium Development Goals</a> agenda in 2015, United Nations created new agenda to achieve 17 goals by 2030. The 17 goals have 169 targets and 247 indicators                   
+                    </p>
+                    
+                    <h1>
+                        UN areas of focus 
+                    </h1>
+
+                    <p>Goals should stimulate action on<a href="https://sustainabledevelopment.un.org/post2015/transformingourworld"> this areas </a>as stated by UN:</p>
+                    <div style="font-style: italic;width: 93%;margin-left: 19px;">
+                        <h2>People</h2> 
+
+                        <p>We are determined to end poverty and hunger, in all their forms and dimensions, and to ensure that all human beings can fulfil their potential in dignity and equality and in a healthy environment.</p> 
+
+                        <h2>Planet</h2> 
+
+                        <p>We are determined to protect the planet from degradation, including through sustainable consumption and production, sustainably managing its natural resources and taking urgent action on climate change, so that it can support the needs of the present and future generations.</p> 
+
+                        <h2>Prosperity</h2> 
+
+                        <p>We are determined to ensure that all human beings can enjoy prosperous and fulfilling lives and that economic, social and technological progress occurs in harmony with nature. </p>
+
+                        <h2>Peace</h2> 
+
+                        <p>We are determined to foster peaceful, just and inclusive societies which are free from fear and violence. There can be no sustainable development without peace and no peace without sustainable development. </p>
+
+                        <h2>Partnership</h2> 
+
+                        <p>We are determined to mobilize the means required to implement this Agenda through a revitalised Global Partnership for Sustainable Development, based on a spirit of strengthened global solidarity, focussed in particular on the needs of the poorest and most vulnerable and with the participation of all countries, all stakeholders and all people. </p>
+                    </div>
+                    <h1>Leave no one behind </h1>
+
+                    <p>
+                        United Nations mantra to give every person on the world the same opportunities and possibilities. 
+                    </p>
+                </div>
             </mat-card-content>
             <mat-card-actions>
                 <button mat-button routerLink="/stories">GO BACK</button>

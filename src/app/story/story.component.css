@@ -3,6 +3,10 @@
     width: 60%;
     max-width: 1080px;
 }
+a {
+    color: #f48fb1;
+    text-decoration: none;
+  }
 
 @media (max-width: 1080px) {
     .story-container {
@@ -24,5 +28,12 @@
 .story-image-wrapper{
     max-height: 500px;
     overflow: hidden;
+}
+
+.story-content-text{
+    font-size: 16px;
+    line-height: 1.4;
+    word-spacing: 3px;
+    letter-spacing: 1.2px;
 }
 

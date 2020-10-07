@@ -15,3 +15,28 @@
   .contact-message{
     height: 400px;
   }
+
+
+  a {
+    color: #c2185b;
+    text-decoration: none;
+  }
+
+  .contact-container{
+    height: 100%;
+  }
+
+  .contact-content{
+    width: 223px;
+    margin: 10px auto;
+  }
+  .contact-email{
+    width: 223px;
+    margin: 0 auto;
+    margin-top: 20%;
+  }
+
+  .social-image{
+    height: 24px;
+    width: auto;
+  }

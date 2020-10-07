@@ -12,25 +12,24 @@ export class HomeComponent implements OnInit {
   ITsImageURL = "../../assets/IT for society transparent inverted.png"
 
   ngOnInit(): void {
-    console.log(document.getElementById('discoverThemeChange'), "tu sam" + $('#head'))
+    if(localStorage.getItem("themeAsset") == "light"){
+      console.log(localStorage.getItem("themeAsset"), "header")
+      $('.ITsImage').attr("src","../../assets/IT for society transparent.png")
+    }
+    else{
+      $('.ITsImage').attr("src","../../assets/IT for society transparent inverted.png")
+    }
     $('head').on('change', "#themeAsset", function() {
+      console.log(localStorage.getItem("themeAsset"), "jquery")
       if(localStorage.getItem("themeAsset") == "light"){
         $('.ITsImage').attr("src","../../assets/IT for society transparent.png")
       }
       else{
         $('.ITsImage').attr("src","../../assets/IT for society transparent inverted.png")
       }
-      console.log(this.ITsImageURL, "hey hey");
     });
   }
 
-  onThemeChange(){
-    this.ITsImageURL = "../../assets/IT for society transparent.png";
-    console.log(this.ITsImageURL, "hey hey");
-  }
-
-  
-
-  
+   
 
 }
