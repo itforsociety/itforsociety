@@ -56,4 +56,19 @@
   }
 
 }
+
+@media (max-height:500px){
+
+  .first-image {
+    width: 200px;
+    margin-top: 5%;
+  }
+  .content-middle {
+    height: 140%;
+  }
+  .content-middle-first {
+    height: 140%;
+  }
+
+}
     

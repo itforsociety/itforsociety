@@ -15,14 +15,17 @@
                 </p>
                 <div *ngIf="story.story_id == 1">
                     <p >
-                        Sustainable Development Goals (SDGs) are the blueprint to achieve a better and more sustainable future for all. After concluding <a href="https://www.un.org/millenniumgoals/">Millenium Development Goals</a> agenda in 2015, United Nations created new agenda to achieve 17 goals by 2030. The 17 goals have 169 targets and 247 indicators                   
+                        Sustainable Development Goals (SDGs) are the blueprint to achieve a better and more sustainable future for all. After concluding <a target="_blank" href="https://www.un.org/millenniumgoals/">Millenium Development Goals</a> agenda in 2015, United Nations created a new agenda to achieve 17 goals by 2030. The 17 goals have 169 targets and 247 indicators.                   
+                    </p>
+                    <p>
+                        IT for Society will focus on bringing you praiseworthy stories contributing to achieving SDGs from all around the world. Most stories will be based on technological solutions (tech for good). 
                     </p>
                     
                     <h1>
-                        UN areas of focus 
+                        SDGs area of focus 
                     </h1>
 
-                    <p>Goals should stimulate action on<a href="https://sustainabledevelopment.un.org/post2015/transformingourworld"> this areas </a>as stated by UN:</p>
+                    <p>Goals should stimulate action on<a target="_blank" href="https://sustainabledevelopment.un.org/post2015/transformingourworld"> these areas </a>as stated by UN:</p>
                     <div style="font-style: italic;width: 93%;margin-left: 19px;">
                         <h2>People</h2> 
 
@@ -44,10 +47,60 @@
 
                         <p>We are determined to mobilize the means required to implement this Agenda through a revitalised Global Partnership for Sustainable Development, based on a spirit of strengthened global solidarity, focussed in particular on the needs of the poorest and most vulnerable and with the participation of all countries, all stakeholders and all people. </p>
                     </div>
+
+                    <h1>SDG Targets and Indicators</h1>
+                    <p>The global indicator framework for Sustainable Development Goals was developed by the Inter-Agency and Expert Group on SDG Indicators (IAEG-SDGs), agreed upon at the 48th session of the United Nations Statistical Commission held in March 2017 and adopted by <a target="_blank" href="https://www.un.org/en/ga/">General Assembly</a> on 6th of July 2017. Here is an example of targets for one SDG:</p>
+                    
+                    <h2>SDG 6 - Ensure availability and sustainable management of water and sanitation for all</h2>
+                    <p></p>
+                    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="margin-bottom: 20px;">
+
+                        <!--- Note that these columns can be defined in any order.
+                              The actual rendered columns are set as a property on the row definition" -->
+                      
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="code">
+                          <th mat-header-cell *matHeaderCellDef> Code </th>
+                          <td mat-cell *matCellDef="let goal6_targets"> {{goal6_targets.code}} </td>
+                        </ng-container>
+                      
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="title">
+                          <th mat-header-cell *matHeaderCellDef style="text-align: center;"> Title </th>
+                          <td mat-cell *matCellDef="let goal6_targets" style=" padding:10px;padding-left: 17px;"> {{goal6_targets.title}} </td>
+                        </ng-container>
+                      
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                      </table>
+                    <p>
+                        You can find the full list of targets and indicators on <a target="_blank" href="https://unstats.un.org/sdgs/indicators/indicators-list/">unstats.un.org</a>
+                    </p>
+                    <h1>Progress report 2020</h1>
+
+                    <p>By the end of 2020, 21 of the 169 Sustainable Development Goal targets have matured. This summary reviews progress made towards those targets at the global level, based on available data as of June 2020. On the report bellow we can see that these 3 targets are achieved or they are on track: </p>
+                    <ul>
+                        <li><strong>8.b	Develop and operationalize a global strategy for youth employment</strong> - 	
+                            According to 2019 data from 102 countries, 98 per cent had a youth employment strategy or plan to develop one in the near future. Furthermore, almost one third of these countries have formulated and operationalized the global strategy for youth employment.
+                        </li>
+                        <li><strong>9.c	Increase access to information and communications technology</strong> - 	
+                            Coverage by mobile networks is now nearly universal. In 2019, an estimated 96.5 per cent of the global population were covered by at least a 2G network, with 81.8 per cent covered by at least a Long-Term Evolution network.
+                        </li>
+                        <li>
+                            <strong>
+                            14.5	Conserve at least 10 per cent of coastal and marine areas
+                            </strong>
+                            As of December 2019, over 17 per cent (or 24 million square kilometres) of waters under national jurisdiction (0 to 200 nautical miles from shore) were covered by protected areas, more than double the area covered in 2010. The global mean percentage of each marine KBA covered by protected areas increased from 30.5 per cent in 2000 to 46.0 per cent in 2019, but the majority of these sites still have incomplete or no coverage by protected areas.
+                        </li>
+                    </ul>
+                    <a target="_blank" href="https://unstats.un.org/sdgs/report/2020/progress-summary-for-SDG-targets/#toolbar=0&navpanes=0&scrollbar=0">here</a> is the full report:
+
+                    <embed type="text/html" src="https://unstats.un.org/sdgs/report/2020/progress-summary-for-SDG-targets/#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="600">
+
                     <h1>Leave no one behind </h1>
 
                     <p>
-                        United Nations mantra to give every person on the world the same opportunities and possibilities. 
+                        <i>Leave no one behind </i>is United Nations mantra for always keeping in mind that whatever you do, every person in the world deserves the same opportunities and possibilities. 
                     </p>
                 </div>
             </mat-card-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import * as $ from 'jquery';
 
 @Component({
@@ -8,19 +9,23 @@ import * as $ from 'jquery';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title,private meta: Meta) {    
+    this.title.setTitle("ITforSociety");
+    this.meta.updateTag({ content: "itforsociety.com" },'property="og:url"');
+    this.meta.updateTag({ content: "assets/IT for society cover.png" },'property="og:image"');
+    this.meta.updateTag({ content: "Use IT for positive impact on society" },'property="og:description"');
+   }
   ITsImageURL = "../../assets/IT for society transparent inverted.png"
 
   ngOnInit(): void {
+
     if(localStorage.getItem("themeAsset") == "light"){
-      console.log(localStorage.getItem("themeAsset"), "header")
       $('.ITsImage').attr("src","../../assets/IT for society transparent.png")
     }
     else{
       $('.ITsImage').attr("src","../../assets/IT for society transparent inverted.png")
     }
     $('head').on('change', "#themeAsset", function() {
-      console.log(localStorage.getItem("themeAsset"), "jquery")
       if(localStorage.getItem("themeAsset") == "light"){
         $('.ITsImage').attr("src","../../assets/IT for society transparent.png")
       }
@@ -29,6 +34,8 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
+
 
    
 

@@ -17,9 +17,11 @@ export class StoriesService {
     story_subtitle: 'Primero',
     story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/primero.PNG',
+    story_og_image:'assets/primero.PNG',
     story_content: 'As of May 2018, 68.5 million people around the world have been forcibly displaced from their homes due to armed conflict and natural disaster.  🌪🔥💔'+
     'Of these, 25.4 million are refugees, and more than 50 percent are children 🙅‍♀️🙅🙇‍♀️🙇‍♂️'+
-    'For helping missing people International Rescue Committee , Save the Children UK and UNICEF developed child protection information management system (CPIMS). 👨‍👩‍👦👨‍👩‍👧👨‍👩‍👧‍👦'+
+    'For helping missing people International Rescue Committee , Save the Children UK and UNICEF developed child protection information management system (CPIMS).One of the products is an open source software platform Primero, originally designed to facilitate family tracing and reunification (FTR) of children in emergencies.'+
+    'In Primero social workers can report missing child 👶 in the system, as well as parent/cousin  👩‍🦰  searching for child. The system then helps to track down and reunite the families.'+
     'To know more about Primero visit primero.org '
   },
   {
@@ -29,6 +31,7 @@ export class StoriesService {
     story_subtitle: 'Goals established by United Nations',
     story_avatar: '../../assets/SDG/SDG_Wheel_Transparent_WEB.png',
     story_image: '../../assets/SDG/SDG_Poster_2019_goals_WEB_transparent.png',
+    story_og_image:'assets/SDG/SDG_Poster_2019_goals_WEB_transparent.png',
     story_content: 'Sustainable Development Goals (SDGs) are the blueprint to achieve a better and more sustainable future for all. After concluding Millenium Development Goals agenda in 2015, United Nations created new agenda to achieve 17 goals by 2030. The 17 goals have 169 targets and 247 indicators  '
   }];
 

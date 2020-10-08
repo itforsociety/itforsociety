@@ -7,6 +7,7 @@ export class Story {
 
 	story_avatar: string;
 	story_image: string;
+	story_og_image: string;
 
 	story_content: string;
 

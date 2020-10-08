@@ -27,7 +27,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 const routes: Routes = [
   {
     path: '',
-    component: ComingSoonComponent,
+    component: HomeComponent,
   },
   {
     path: 'home',
@@ -85,7 +85,7 @@ const routes: Routes = [
     TodoSharedModule.forRoot(),
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled', // Add options right here
-    })
+    }),
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
