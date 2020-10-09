@@ -3,6 +3,8 @@ import { Story } from '../models/story.model';
 import { StoriesService } from '../services/stories.service';
 import { ActivatedRoute } from '@angular/router';
 import { Meta, Title} from '@angular/platform-browser';
+import { FacebookService } from 'ngx-facebook';
+
 export interface SDGs {
   code: string;
   title: string;
@@ -59,7 +61,8 @@ export class StoryComponent implements OnInit {
     private storiesService: StoriesService,
     private route: ActivatedRoute,
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    private fb: FacebookService
     ) {}
 
   ngOnInit(): void {
@@ -73,5 +76,6 @@ export class StoryComponent implements OnInit {
       this.meta.updateTag({ content: this.story.story_og_image },'property="og:image"');
       this.meta.updateTag({ content: this.story.story_title },'property="og:description"');
     });
+    
   }
 }

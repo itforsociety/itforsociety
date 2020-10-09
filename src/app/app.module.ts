@@ -24,6 +24,7 @@ import {StoryComponent} from './story/story.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 
+
 const routes: Routes = [
   {
     path: '',
@@ -85,7 +86,7 @@ const routes: Routes = [
     TodoSharedModule.forRoot(),
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled', // Add options right here
-    }),
+    },)
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
