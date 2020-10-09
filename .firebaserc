@@ -1,6 +1,7 @@
 {
   "projects": {
-    "default": "itforsociety-53a21"
+    "default": "itforsociety-53a21",
+    "itsDEV": "itforsocietydev"
   },
   "targets": {
     "itforsociety-53a21": {
