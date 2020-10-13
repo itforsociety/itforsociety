@@ -23,6 +23,8 @@ import { StoriesComponent } from './stories/stories.component';
 import {StoryComponent} from './story/story.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { Story3sitemapComponent } from './story/custom/story3sitemap/story3sitemap.component';
+import { Story1sdgComponent } from './story/custom/story1sdg/story1sdg.component';
 
 
 const routes: Routes = [
@@ -72,7 +74,9 @@ const routes: Routes = [
     StoriesComponent,
     StoryComponent,
     ComingSoonComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    Story3sitemapComponent,
+    Story1sdgComponent
   ],
   imports: [
     BrowserModule,

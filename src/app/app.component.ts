@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 
 
 export class AppComponent {
-  title = 'ITforSociety';
+  title = 'IT for Society';
   comingsoon: boolean = false;
 }

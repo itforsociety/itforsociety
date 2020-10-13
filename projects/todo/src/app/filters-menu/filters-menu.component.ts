@@ -16,6 +16,7 @@ const moment =  _moment;
 export class FiltersMenuComponent implements OnInit {
   today = moment().format('dddd');
   daysOfTheWeek: string[] = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday','Saturday'];
+  showCompleted: boolean = false;
 
   constructor(private todoDataService : TodoDataService, private taskComponent: TaskComponent) {
     
@@ -28,6 +29,9 @@ export class FiltersMenuComponent implements OnInit {
     this.todoDataService.getByDates(selectedDate);
    }
   
+  filterTodoCompleted(showCompleted){
+    this.showCompleted = this.todoDataService.filterTodoCompleted(showCompleted);
+  }
   
   ngOnInit(): void {
     console.log(moment().day(this.today))

@@ -47,9 +47,12 @@ export class TaskComponent implements OnInit {
   private sub: any;
   dateFrom = null;
   subscription: Subscription;
+  showCompleted: boolean = true ;
   //@Input() todos: Todo[] = [];
 
   constructor(private todoDataService: TodoDataService, private route: ActivatedRoute) {
+    this.showCompleted = todoDataService.getShowCompletedFlag();
+    console.log("tu sam",this.showCompleted,todoDataService.showCompleted)
      this.sub = this.route.paramMap.subscribe(params => {
       this.dateFrom = params.get('dateFrom'); 
       console.log("tu sam date param",this.dateFrom, params);
