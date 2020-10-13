@@ -18,6 +18,7 @@ export class TodoDataService {
   add_todo_task = false;
   todo_task_created = false;
   serviceErrors:any = {};
+  showCompleted: boolean = true;
 
   // Placeholder for todos
   todos: Todo[] = [];
@@ -150,6 +151,15 @@ export class TodoDataService {
     this.updateTodo(todo);
 
     return todo;
+  }
+
+  // Toggle todo complete
+  filterTodoCompleted(showCompleted){
+    this.showCompleted = (showCompleted == true) ? false : true;
+    return this.showCompleted;
+  }
+  getShowCompletedFlag(){
+    return this.showCompleted;
   }
 
   // Toggle todo date

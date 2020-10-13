@@ -8,6 +8,9 @@
   </mat-selection-list>
   
   <p>
+    <mat-checkbox class="example-margin" [(ngModel)]="showCompleted" (click)=filterTodoCompleted(showCompleted)>Completed</mat-checkbox>
+  </p>
+  <p>
     Option selected: {{today}}<!-- {{days.selectedOptions.selected[0]?.value}} -->
   </p>
 </mat-card>    

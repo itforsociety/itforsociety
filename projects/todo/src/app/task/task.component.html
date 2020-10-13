@@ -5,7 +5,7 @@
   </mat-form-field>
   <div class="main" *ngIf="todos.length > 0">
     <mat-list #tasks >
-      <mat-list-item *ngFor="let todo of todos" [class.completed]="todo.todo_task_complete_f">
+      <mat-list-item *ngFor="let todo of todos" [class.completed]="todo.todo_task_complete_f" [class.filterCompleted]="showCompleted && todo.todo_task_complete_f">
         <div class="row-flex">
           <div class="task-name">
             <mat-checkbox class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [(ngModel)]="todo.todo_task_complete_f" [checked]="todo.todo_task_complete_f"></mat-checkbox>
