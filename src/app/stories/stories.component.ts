@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Story} from '../models/story.model' 
 import { StoriesService } from '../services/stories.service';
+import { Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-stories',
@@ -11,7 +12,7 @@ export class StoriesComponent implements OnInit {
 
  
 
-  constructor(private storiesService: StoriesService) {
+  constructor(private storiesService: StoriesService, private meta:Meta) {
   }
 
   numberOfColumns: number = 3;
@@ -19,6 +20,8 @@ export class StoriesComponent implements OnInit {
   stories: Story[];
 
   ngOnInit(): void {
+    this.meta.updateTag({ content: "assets/primero.png", property: "og:image"});
+    this.meta.updateTag({ content: "SDGs",property: "og:description"});
     this.stories = this.storiesService.getAllStories();
     if(window.innerWidth <= 400){
       this.numberOfColumns = 1;

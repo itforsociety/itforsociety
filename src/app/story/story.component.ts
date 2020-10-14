@@ -33,16 +33,14 @@ export class StoryComponent implements OnInit {
       this.title.setTitle(this.story.story_title + " | ITforSociety");
       this.meta.updateTag({ name: this.story.story_title, content: this.story.story_subtitle });
       this.meta.updateTag({ content: "itforsociety.com/story/" + this.story.story_id + "/" + this.story.story_title },'property="og:url"');
-      this.meta.updateTag({ content: this.story.story_og_image },'property="og:image"');
-      this.meta.updateTag({ content: this.story.story_title },'property="og:description"');
+      this.meta.updateTag({ content: this.story.story_og_image, property: "og:image"});
+      this.meta.updateTag({ content: "SDGs",property: "og:description"});
+      this.meta.updateTag({ name: 'twitter:description', content: "desccirsda" });
+      this.meta.updateTag({ name: 'twitter:image', content: this.story.story_og_image });
     });
-    this.fb.init({ 
-      appId: '441659765953427',
-      status: true, 
-      cookie: true, 
-      xfbml: true,
-      version: 'v2.4'
-    });
+    
+    this.meta.addTag({ name: 'twitter:title', content: "vani" });
+
   }
 
   shareFB(){
