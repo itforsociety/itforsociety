@@ -12,7 +12,11 @@ export class StoriesComponent implements OnInit {
 
  
 
-  constructor(private storiesService: StoriesService, private meta:Meta) {
+  constructor(
+    private storiesService: StoriesService,
+    private meta:Meta,
+    private title:Title
+    ) {
   }
 
   numberOfColumns: number = 3;
@@ -20,8 +24,17 @@ export class StoriesComponent implements OnInit {
   stories: Story[];
 
   ngOnInit(): void {
-    this.meta.updateTag({ content: "assets/primero.png", property: "og:image"});
-    this.meta.updateTag({ content: "SDGs",property: "og:description"});
+    this.title.setTitle("Stories" + " | IT for Society");
+    this.meta.updateTag({ name: "title", content: "Stories" + " | IT for Society" });
+    this.meta.updateTag({ name: "description", content: "praisworthy stories about tech for good and more" });
+    this.meta.updateTag({ property: "og:title",content: "Stories" + " | IT for Society"});
+    this.meta.updateTag({ property: "og:url",content: "https://itforsociety.com/stories"});
+    this.meta.updateTag({ property: "og:description",content: "praisworthy stories about tech for good and more"});
+    this.meta.updateTag({ name: "twitter:title",content: "Stories" + " | IT for Society"});
+    this.meta.updateTag({ name: "twitter:url",content: "https://itforsociety.com/stories"});
+    this.meta.updateTag({ name: 'twitter:description', content: "praisworthy stories about tech for good and more" });
+
+
     this.stories = this.storiesService.getAllStories();
     if(window.innerWidth <= 400){
       this.numberOfColumns = 1;

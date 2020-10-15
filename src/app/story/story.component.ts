@@ -30,12 +30,18 @@ export class StoryComponent implements OnInit {
       this.story = new Story (
         this.storiesService.getStoriesByID(Number(params.get('story_id')))        
       );
-      this.title.setTitle(this.story.story_title + " | ITforSociety");
+      this.title.setTitle(this.story.story_title + " | IT for Society");
       this.meta.updateTag({ name: this.story.story_title, content: this.story.story_subtitle });
-      this.meta.updateTag({ content: "itforsociety.com/story/" + this.story.story_id + "/" + this.story.story_title },'property="og:url"');
-      this.meta.updateTag({ content: this.story.story_og_image, property: "og:image"});
-      this.meta.updateTag({ content: "SDGs",property: "og:description"});
-      this.meta.updateTag({ name: 'twitter:description', content: "desccirsda" });
+
+      this.meta.updateTag({ property: "og:url", content: "itforsociety.com/story/" + this.story.story_id + "/" + this.story.story_tag });
+      this.meta.updateTag({ property: "og:title", content: this.story.story_title + " | IT for Society"});
+      this.meta.updateTag({ property: "og:image", content: this.story.story_og_image});
+      this.meta.updateTag({ property: "og:description",content: this.story.story_subtitle});
+
+
+      this.meta.updateTag({ name: "twitter:url", content: "itforsociety.com/story/" + this.story.story_id + "/" + this.story.story_tag });
+      this.meta.updateTag({ name: "twitter:title", content: this.story.story_title + " | IT for Society"});
+      this.meta.updateTag({ name: 'twitter:description', content: this.story.story_subtitle });
       this.meta.updateTag({ name: 'twitter:image', content: this.story.story_og_image });
     });
     
