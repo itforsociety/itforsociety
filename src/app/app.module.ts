@@ -45,7 +45,7 @@ const routes: Routes = [
     component: ContactFormComponent
   },
   {
-    path: 'story/:story_id/:story_title',
+    path: 'story/:story_id/:story_tag',
     component: StoryComponent
   },
   {

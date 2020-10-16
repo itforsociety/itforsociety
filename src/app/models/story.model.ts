@@ -5,6 +5,7 @@ export class Story {
 	story_title: string;
 	story_subtitle: string;
 
+	story_tag: string;
 	story_avatar: string;
 	story_image: string;
 	story_og_image: string;

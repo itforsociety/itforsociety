@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
    <url>
-      <loc>https://itforsociety.com/home</loc>
+      <loc>https://itforsociety.com</loc>
       <lastmod>2020-09-10</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
@@ -11,7 +11,7 @@
       <loc>https://www.itforsociety.com/home</loc>
       <lastmod>2020-09-10</lastmod>
       <changefreq>monthly</changefreq>
-      <priority>0.2</priority>
+      <priority>0.9</priority>
    </url>
    <url>
       <loc>https://itforsociety.com/stories</loc>
@@ -32,13 +32,19 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://itforsociety.com/story/2/Child%20Protection%20Information%20Management%20System%20%28CPIMS%29</loc>
+      <loc>https://itforsociety.com/story/2/primero</loc>
+      <lastmod>2020-09-10</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.6</priority>
+   </url>
+   <url>
+      <loc>https://itforsociety.com/story/1/sdg</loc>
       <lastmod>2020-09-10</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://itforsociety.com/story/1/Sustainable%20Development%20Goals%20%28SDGs%29</loc>
+      <loc>https://itforsociety.com/story/3/sitemap</loc>
       <lastmod>2020-09-10</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
