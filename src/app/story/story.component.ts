@@ -35,7 +35,7 @@ export class StoryComponent implements OnInit {
 
       this.meta.updateTag({ property: "og:url", content: "itforsociety.com/story/" + this.story.story_id + "/" + this.story.story_tag });
       this.meta.updateTag({ property: "og:title", content: this.story.story_title + " | IT for Society"});
-      this.meta.updateTag({ property: "og:image", content: this.story.story_og_image});
+      this.meta.updateTag({ property: "og:image", name: "image", content: this.story.story_og_image});
       this.meta.updateTag({ property: "og:description",content: this.story.story_subtitle});
 
 
