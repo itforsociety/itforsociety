@@ -45,7 +45,6 @@ export class StoryComponent implements OnInit {
       this.meta.updateTag({ name: 'twitter:image', content: this.story.story_og_image });
     });
     
-    this.meta.addTag({ name: 'twitter:title', content: "vani" });
 
   }
 
