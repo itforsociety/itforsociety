@@ -7,10 +7,7 @@
   display: none;
 }
 
-.flex-center {
-  display:flex;
-  justify-content: center;
-}
+
 .content-middle-first {
   height: 100%;
   width: 100%;

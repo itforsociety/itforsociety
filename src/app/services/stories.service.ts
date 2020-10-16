@@ -12,12 +12,12 @@ export class StoriesService {
 
   stories: Story[] = [{
     story_id: 3,
-    story_custom: false,
+    story_custom: true,
     story_title: 'Create your website sitemap and robots.txt in Angular',
     story_subtitle: 'How does Google know about your website?',
     story_tag: 'sitemap',
     story_avatar: '../../assets/IT for society circle.png',
-    story_image: '../../assets/stories/How does Google find my website.jpg',
+    story_image: '../../assets/stories/3/How does Google find my website.jpg',
     story_og_image:'assets/stories/How does Google find my website.jpg',
     story_content: 'Google searches your website with Web Crawler, also known as spider or spiderbot. When the website is found, it is starting to crawl your page. Google renders the page and analyses both the text and non-text content and overall visual layout to decide where it should appear in Search results.'
   },{
