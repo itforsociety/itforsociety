@@ -25,6 +25,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { Story3sitemapComponent } from './story/custom/story3sitemap/story3sitemap.component';
 import { Story1sdgComponent } from './story/custom/story1sdg/story1sdg.component';
+import { QuoteComponent } from './quote/quote.component';
 
 
 const routes: Routes = [
@@ -41,12 +42,20 @@ const routes: Routes = [
     component: StoriesComponent
   },
   {
+    path: 'quotes',
+    component: QuotesComponent
+  },
+  {
     path: 'contact',
     component: ContactFormComponent
   },
   {
     path: 'story/:story_id/:story_tag',
     component: StoryComponent
+  },
+  {
+    path: 'quote/:story_id/:story_tag',
+    component: QuoteComponent
   },
   {
     path: 'registration',
@@ -76,7 +85,8 @@ const routes: Routes = [
     ComingSoonComponent,
     ContactFormComponent,
     Story3sitemapComponent,
-    Story1sdgComponent
+    Story1sdgComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,

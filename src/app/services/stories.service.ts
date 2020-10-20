@@ -47,6 +47,39 @@ export class StoriesService {
     story_content: 'Sustainable Development Goals (SDGs) are the blueprint to achieve a better and more sustainable future for all. After concluding Millenium Development Goals agenda in 2015, United Nations created new agenda to achieve 17 goals by 2030. The 17 goals have 169 targets and 247 indicators  '
   }];
 
+
+  quotes: Story[] = [{
+    story_id: 3,
+    story_custom: false,
+    story_title: 'Jimi Hendrix',
+    story_subtitle: 'quote',
+    story_tag: 'jimi',
+    story_avatar: '../../assets/IT for society circle.png',
+    story_image: '../../assets/quotes/jimi hendrix when the power of love.jpg',
+    story_og_image:'assets/quotes/jimi hendrix when the power of love.jpg',
+    story_content: 'When the power of love overcomes the love of power, world will know peace'
+  },{
+    story_id: 2,
+    story_custom: false,
+    story_title: 'Jordan Peterson',
+    story_subtitle: 'quote',
+    story_tag: 'jimi',
+    story_avatar: '../../assets/IT for society circle.png',
+    story_image: '../../assets/quotes/Jordan Peterson order your household.jpg',
+    story_og_image:'assets/quotes/Jordan Peterson order your household.jpg',
+    story_content: "Don't reorganize your state until you have ordered your own experience.Have some humility.If you cannot bring peace to your household,how dare you try to rule a city?"
+  },{
+    story_id: 1,
+    story_custom: false,
+    story_title: 'Peter Maurer',
+    story_subtitle: 'quote',
+    story_tag: 'jimi',
+    story_avatar: '../../assets/peter maurer qoute forth industrial revolution.jpg',
+    story_image: '../../assets/quotes/peter maurer qoute forth industrial revolution.jpg',
+    story_og_image:'assets/quotes/jimi hendrix - when power of love.png',
+    story_content: 'The Fourth Industrial Revolution has the potential to make inequalities visible and to make them less acceptable in the future'
+  }]
+
   
   getStoriesByID(story_id: number): Story {
     return this.stories
@@ -56,6 +89,16 @@ export class StoriesService {
 
   getAllStories(): Story[] {
     return this.stories;
+  }
+
+  getAllQuotes(): Story[] {
+    return this.quotes;
+  }
+  
+  getQuoteByID(story_id: number): Story {
+    return this.quotes
+      .filter(todo => todo.story_id === story_id)
+      .pop();
   }
 
 }

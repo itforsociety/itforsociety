@@ -9,7 +9,7 @@ const admin = require('firebase-admin');
 //const appUrl = 'localhost:5000';
 //const renderUrl = 'localhost:3000/render';
 
-const appUrl = 'itforsocietydev.firebaseapp.com';
+const appUrl = 'itforsociety-53a21.firebaseapp.com';
 const renderUrl = 'https://render-tron.appspot.com/render';
 // init firebase
 admin.initializeApp(functions.config().firebase);

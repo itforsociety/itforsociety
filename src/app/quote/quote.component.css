@@ -1,0 +1,49 @@
+.story-container {
+    margin: 0 auto;
+    width: 60%;
+    max-width: 1080px;
+}
+:host ::ng-deep a {
+    color: #f48fb1;
+    text-decoration: none;
+}
+:host ::ng-deep h1 {
+    padding: 40px;
+    padding-left: 0;
+    padding-top: 60px;
+    color: #a9d18e;
+}
+:host ::ng-deep li{
+    padding-bottom: 5px;
+    line-height: 1.3;
+}
+
+
+@media (max-width: 1080px) {
+    .story-container {
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+.story-header-image {
+    background-size: cover;
+    background-position: center;
+  }
+
+.story-image{
+    width: 100%;
+    height: auto;
+}
+
+.story-image-wrapper{
+    overflow: hidden;
+}
+
+.story-content-text{
+    font-size: 16px;
+    line-height: 1.4;
+    word-spacing: 3px;
+    letter-spacing: 1.2px;
+}
+
