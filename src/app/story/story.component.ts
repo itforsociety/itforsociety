@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Story } from '../models/story.model';
 import { StoriesService } from '../services/stories.service';
 import { ActivatedRoute } from '@angular/router';
-import { Meta, Title} from '@angular/platform-browser';
+import { Meta, Title,DomSanitizer,SafeResourceUrl} from '@angular/platform-browser';
 import { FacebookService } from 'ngx-facebook';
 
 
@@ -15,6 +15,7 @@ import { FacebookService } from 'ngx-facebook';
 export class StoryComponent implements OnInit {
 
   story: Story = new Story();
+  story_video_URL: SafeResourceUrl;
   
 
   constructor(
@@ -22,14 +23,17 @@ export class StoryComponent implements OnInit {
     private route: ActivatedRoute,
     private title: Title,
     private meta: Meta,
-    private fb: FacebookService
-    ) {}
+    private fb: FacebookService,
+    private sanitizer: DomSanitizer
+    ) {
+    }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => { 
       this.story = new Story (
         this.storiesService.getStoriesByID(Number(params.get('story_id')))        
       );
+      this.story_video_URL  = this.sanitizer.bypassSecurityTrustResourceUrl(this.story.story_video_URL);
       this.title.setTitle(this.story.story_title + " | IT for Society");
       this.meta.updateTag({ name: this.story.story_title, content: this.story.story_subtitle });
       this.meta.updateTag({ property: "article:published_time", content:"2020-10-16" })

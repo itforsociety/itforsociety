@@ -9,7 +9,9 @@
               <mat-card-title>{{story.story_title}}</mat-card-title>
               <mat-card-subtitle>{{story.story_subtitle}}</mat-card-subtitle>
             </mat-card-header>
-            <div class="story-image" style="background-image: url('{{story.story_image}}');"></div>
+            <a routerLink="/story/{{story.story_id}}/{{story.story_tag}}">
+              <div class="story-image" style="background-image: url('{{story.story_image}}');"></div>
+            </a>
             <mat-card-content class="story-content-text">
               <p>
                 {{story.story_content}}

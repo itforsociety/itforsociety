@@ -11,6 +11,17 @@ export class StoriesService {
   //story: Story = [];
 
   stories: Story[] = [{
+    story_id: 4,
+    story_custom: false,
+    story_title: 'Hello Tractor',
+    story_subtitle: 'making affordable tractor services for the small farm holders which can not afford to buy one',
+    story_tag: 'hellotrackor',
+    story_avatar: '../../assets/IT for society circle.png',
+    story_image: '../../assets/stories/4/hellotractor.JPG',
+    story_og_image:'assets/stories/4/hellotractor.JPG',
+    story_video_URL:'https://www.youtube.com/embed/FZUilc5I0lw',
+    story_content: 'You don\'t have a tractor? Don\'t worry you don\'t have to buy one, you can just rent it over "Hello Tractor"! Nigeria 🇳🇬     Great IT platform example in Nigeria 🇳🇬with positive impact on society, it\'s making affordable tractor services for the small farm holders which can\'t afford to buy one. Also great opportunity for Tractor owners to expand their business!         Connecting it with IoT and applications makes the perfect example of IT for Society!         Hello Tractor aims to transform         the agricultural ecosystem,         creating efficiencies         that generate inclusive growth,         reduce poverty,          and help build stronger, more stable economies         read more on:         https://hellotractor.com/ '
+  },{
     story_id: 3,
     story_custom: true,
     story_title: 'Create your website sitemap and robots.txt in Angular',
@@ -18,7 +29,8 @@ export class StoriesService {
     story_tag: 'sitemap',
     story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/stories/3/How does Google find my website.jpg',
-    story_og_image:'assets/stories/How does Google find my website.jpg',
+    story_og_image:'assets/stories/3/How does Google find my website.jpg',
+    story_video_URL:'false',
     story_content: 'Google searches your website with Web Crawler, also known as spider or spiderbot. When the website is found, it is starting to crawl your page. Google renders the page and analyses both the text and non-text content and overall visual layout to decide where it should appear in Search results.'
   },{
     story_id: 2,
@@ -29,6 +41,7 @@ export class StoriesService {
     story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/primero.PNG',
     story_og_image:'assets/primero.PNG',
+    story_video_URL:'false',
     story_content: 'As of May 2018, 68.5 million people around the world have been forcibly displaced from their homes due to armed conflict and natural disaster.  🌪🔥💔'+
     'Of these, 25.4 million are refugees, and more than 50 percent are children 🙅‍♀️🙅🙇‍♀️🙇‍♂️'+
     'For helping missing people International Rescue Committee , Save the Children UK and UNICEF developed child protection information management system (CPIMS).One of the products is an open source software platform Primero, originally designed to facilitate family tracing and reunification (FTR) of children in emergencies.'+
@@ -44,6 +57,7 @@ export class StoriesService {
     story_avatar: '../../assets/SDG/SDG_Wheel_Transparent_WEB.png',
     story_image: '../../assets/SDG/SDG_Poster_2019_goals_WEB_transparent.png',
     story_og_image:'assets/SDG/SDG_Poster_2019_goals_WEB_transparent.png',
+    story_video_URL:'false',
     story_content: 'Sustainable Development Goals (SDGs) are the blueprint to achieve a better and more sustainable future for all. After concluding Millenium Development Goals agenda in 2015, United Nations created new agenda to achieve 17 goals by 2030. The 17 goals have 169 targets and 247 indicators  '
   }];
 
@@ -57,6 +71,7 @@ export class StoriesService {
     story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/quotes/jimi hendrix when the power of love.jpg',
     story_og_image:'assets/quotes/jimi hendrix when the power of love.jpg',
+    story_video_URL:'false',
     story_content: 'When the power of love overcomes the love of power, world will know peace'
   },{
     story_id: 2,
@@ -67,6 +82,7 @@ export class StoriesService {
     story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/quotes/Jordan Peterson order your household.jpg',
     story_og_image:'assets/quotes/Jordan Peterson order your household.jpg',
+    story_video_URL:'false',
     story_content: "Don't reorganize your state until you have ordered your own experience.Have some humility.If you cannot bring peace to your household,how dare you try to rule a city?"
   },{
     story_id: 1,
@@ -77,6 +93,7 @@ export class StoriesService {
     story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/quotes/peter maurer qoute forth industrial revolution.jpg',
     story_og_image:'assets/quotes/peter maurer qoute forth industrial revolution.jpg',
+    story_video_URL:'false',
     story_content: 'The Fourth Industrial Revolution has the potential to make inequalities visible and to make them less acceptable in the future'
   }]
 
