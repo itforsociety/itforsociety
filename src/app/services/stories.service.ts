@@ -63,7 +63,7 @@ export class StoriesService {
     story_custom: false,
     story_title: 'Jordan Peterson',
     story_subtitle: 'quote',
-    story_tag: 'jimi',
+    story_tag: 'peterson',
     story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/quotes/Jordan Peterson order your household.jpg',
     story_og_image:'assets/quotes/Jordan Peterson order your household.jpg',
@@ -73,10 +73,10 @@ export class StoriesService {
     story_custom: false,
     story_title: 'Peter Maurer',
     story_subtitle: 'quote',
-    story_tag: 'jimi',
-    story_avatar: '../../assets/peter maurer qoute forth industrial revolution.jpg',
+    story_tag: '4.0',
+    story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/quotes/peter maurer qoute forth industrial revolution.jpg',
-    story_og_image:'assets/quotes/jimi hendrix - when power of love.png',
+    story_og_image:'assets/quotes/peter maurer qoute forth industrial revolution.jpg',
     story_content: 'The Fourth Industrial Revolution has the potential to make inequalities visible and to make them less acceptable in the future'
   }]
 
