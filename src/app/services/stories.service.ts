@@ -11,11 +11,22 @@ export class StoriesService {
   //story: Story = [];
 
   stories: Story[] = [{
+    story_id: 5,
+    story_custom: false,
+    story_title: 'Share the Meal - The Nobel Peace Prize 2020',
+    story_subtitle: 'World Food Program was awarded with Nobel peace prize for 2020',
+    story_tag: 'wfp',
+    story_avatar: '../../assets/IT for society circle.png',
+    story_image: '../../assets/stories/5/wfpNobel.JPG',
+    story_og_image:'assets/stories/5/wfpNobel.JPG',
+    story_video_URL:'https://www.youtube.com/embed/efkVY-UyGDM',
+    story_content: 'This month were Nobel Prize 2020 awards. Nobel prize for peace was awarded to World Food Programme (WFP). In 2019, the WFP provided assistance to 100 million people in 88 countries who are victims of acute food insecurity and hunger. They archived this, mostly with the help of Share the Meal application, which shows us another great example of IT for Society. Check the video how the Share the Meal application works and install the app to help battle against hunger. https://sharethemeal.org/en/index.html   '
+  },{
     story_id: 4,
     story_custom: false,
     story_title: 'Hello Tractor',
     story_subtitle: 'making affordable tractor services for the small farm holders which can not afford to buy one',
-    story_tag: 'hellotrackor',
+    story_tag: 'hellotractor',
     story_avatar: '../../assets/IT for society circle.png',
     story_image: '../../assets/stories/4/hellotractor.JPG',
     story_og_image:'assets/stories/4/hellotractor.JPG',

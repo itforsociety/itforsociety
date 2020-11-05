@@ -15,8 +15,11 @@
                 </p>
                 <app-story1sdg *ngIf="story.story_id == 1"></app-story1sdg>
                 <app-story3sitemap *ngIf="story.story_id == 3"></app-story3sitemap>
-                <p *ngIf="story.story_video_URL != 'false'">
+                <p *ngIf="story.story_video_URL != 'false' && story.story_id == 4">
                     <iframe width="100%" height="350" src="https://www.youtube.com/embed/FZUilc5I0lw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </p>
+                <p *ngIf="story.story_video_URL != 'false' && story.story_id == 5">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/efkVY-UyGDM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </p>
             </mat-card-content>
             <mat-card-actions>

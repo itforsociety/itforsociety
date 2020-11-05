@@ -39,6 +39,7 @@
 .story-image-wrapper{
     max-height: 500px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .story-content-text{
