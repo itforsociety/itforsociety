@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
   darkModeChecked = true;
-  darkThemeName = "my-pink-bluegrey";
+  darkThemeName = "unicorn-app-theme.scss";
   lightThemeName = "my-indigo-pink";
 
   ngOnInit(): void {
@@ -27,10 +27,12 @@ export class HeaderComponent implements OnInit {
     console.log(this.darkThemeName);
     if (this.darkModeChecked){
       localStorage.setItem("themeAsset", "dark");
-      elemCSS.setAttribute ('href','../assets/css/' + this.darkThemeName + '.css');
+      //elemCSS.setAttribute ('href','../assets/css/' + this.darkThemeName);
+      document.body.classList.remove("unicorn-light-theme");
     }
     else{
-      elemCSS.setAttribute ('href','../assets/css/' + this.lightThemeName + '.css');
+      //elemCSS.setAttribute ('href','../assets/css/' + this.lightThemeName + '.css');
+      document.body.classList.add("unicorn-light-theme");
       localStorage.setItem("themeAsset", "light");
     }
     $("#themeAsset").trigger("change");
