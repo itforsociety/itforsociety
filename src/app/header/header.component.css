@@ -5,6 +5,15 @@
 }
 
 .logoHeader{
-  width: 50px;
+  width: 125px;
   height: auto;
+}
+
+.example-margin{
+  width: 125px;
+
+}
+
+::ng-deep .mat-slide-toggle-label{
+  flex-direction: row-reverse !important;
 }
