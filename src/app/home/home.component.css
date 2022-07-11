@@ -29,13 +29,13 @@
   width: 340px;
 }
 .first-image{
-  width: 200px;
-  margin-top: 25%;
-  margin-bottom: 0;
+    width: 270px;
+    margin-top: 20%;
+    margin-bottom: 0;
 }
 
 .content-middle img {
-  width: 200px;
+  width: 270px;
   margin-top: 5px;
   margin-bottom: 30px;
 }
@@ -45,7 +45,7 @@
 @media (max-width:500px){
 
   .first-image {
-    width: 200px;
+    width: 270px;
     margin-top: 35%;
   }
   .content-middle {
@@ -57,7 +57,7 @@
 @media (max-height:500px){
 
   .first-image {
-    width: 200px;
+    width: 270px;
     margin-top: 5%;
   }
   .content-middle {

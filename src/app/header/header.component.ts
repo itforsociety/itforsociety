@@ -28,11 +28,11 @@ export class HeaderComponent implements OnInit {
     if (this.darkModeChecked){
       localStorage.setItem("themeAsset", "dark");
       //elemCSS.setAttribute ('href','../assets/css/' + this.darkThemeName);
-      document.body.classList.remove("unicorn-light-theme");
+      document.body.classList.remove("its-light-theme");
     }
     else{
       //elemCSS.setAttribute ('href','../assets/css/' + this.lightThemeName + '.css');
-      document.body.classList.add("unicorn-light-theme");
+      document.body.classList.add("its-light-theme");
       localStorage.setItem("themeAsset", "light");
     }
     $("#themeAsset").trigger("change");

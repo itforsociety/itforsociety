@@ -1,5 +1,5 @@
 <mat-toolbar id="header" class="header" color="primary">
-    <img id="logoHeader" class="logoHeader" src="../assets/Logo Text white.png" alt="logo">
+    <img id="logoHeader" class="logoHeader" src="../assets/Logo Text white.png" alt="logo" routerLink="/home">
     <span class="fill-remaining-space"></span>
 
     <a mat-button id="matButton1" class="matButton" routerLink="/home">Home</a>
@@ -9,7 +9,7 @@
         <a mat-menu-item routerLink="/stories">Stories</a>
         <a mat-menu-item routerLink="/quotes">Quotes</a>
     </mat-menu>
-    <a mat-button id="matButton3" class="matButton" routerLink="/Services">Services</a>
+    <a mat-button id="matButton3" class="matButton" routerLink="/Services" style="display:none;">Services</a>
     <a mat-button id="matButton3" class="matButton" routerLink="/contact">Contact</a>
     <a mat-button id="matButton4" class="matButton" routerLink="/todo" style="display: none;">Todo</a>
     <span class="fill-remaining-space"></span>
