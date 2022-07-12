@@ -15,7 +15,7 @@
   border-radius: initial !important;
 }
 .content-middle {
-  height: 60%;
+  height: 80%;
   width: 100%;
   padding: 0%;
   border-radius: initial !important;
@@ -30,7 +30,7 @@
 }
 .first-image{
     width: 270px;
-    margin-top: 20%;
+    margin-top: 10vw;
     margin-bottom: 0;
 }
 
