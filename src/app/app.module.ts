@@ -26,6 +26,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { Story3sitemapComponent } from './story/custom/story3sitemap/story3sitemap.component';
 import { Story1sdgComponent } from './story/custom/story1sdg/story1sdg.component';
 import { QuoteComponent } from './quote/quote.component';
+import { ProductsComponent } from './products/products.component';
 
 
 const routes: Routes = [
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'quotes',
     component: QuotesComponent
+  },
+  {
+    path: 'products',
+    component: ProductsComponent
   },
   {
     path: 'contact',
@@ -86,7 +91,8 @@ const routes: Routes = [
     ContactFormComponent,
     Story3sitemapComponent,
     Story1sdgComponent,
-    QuoteComponent
+    QuoteComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

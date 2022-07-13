@@ -1,0 +1,53 @@
+.products{
+    height: 90%;
+}
+
+.backgroundProducts{
+    background-color: #00236A;
+    height: 90%;
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+.elementsSVG{
+    width: 128vw;
+    height: 72vw;
+    margin-left: -12vw;
+    margin-top: -11.4vw;
+}
+
+.rectangleSVG{
+    position: absolute;
+    width:1030.649px;
+    height:1019.08px;
+}
+.rectangle{
+    width:52vw;
+    height:52vw;
+    rx:21px;
+    transform:matrix(0.995, 0.105, -0.105, 0.995, 96.793, 0);
+    fill:#f6f6f6;
+    opacity:0.85;
+}
+.triangleSVG{
+    position: absolute;
+    width:1396.917px;
+    height:1540.951px;
+}
+.triangle{
+    d:path("M654.763,19.319a13,13,0,0,1,22.475,0l643.4,1106.144A13,13,0,0,1,1309.4,1145H22.6a13,13,0,0,1-11.237-19.536Z");
+    transform:matrix(0.208, -0.978, 0.978, 0.208, 0, 1302.893);
+    fill:#f6f6f6;
+    opacity:0.85;
+    /* width: 0px;
+    height: 0px;
+    border-left: 30vw solid transparent;
+    border-right: 30vw solid transparent;
+    border-bottom: 30vw solid #2f2f2f; */
+
+}
+.ellipseSVG{
+    position: absolute;
+    width:979px;
+    height:969px;
+}
