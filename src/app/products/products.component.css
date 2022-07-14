@@ -2,7 +2,7 @@
     height: 90%;
 }
 
-.backgroundProducts{
+.productsBackground{
     background-color: #00236A;
     height: 90%;
     width: 100%;
@@ -14,6 +14,7 @@
     height: 72vw;
     margin-left: -12vw;
     margin-top: -11.4vw;
+    position: absolute;
 }
 
 .rectangleSVG{
@@ -50,4 +51,38 @@
     position: absolute;
     width:979px;
     height:969px;
+}
+
+
+
+
+.productCards{
+    overflow-y: scroll;
+    height: 100%;
+    width: 100%;
+    position:absolute;
+
+}
+.productCardsFirst{
+    display: flex;
+    height: 100%;
+}
+.productCardsSecond{
+    display: flex;
+    height: 110%;
+}
+
+.productCardLeft{
+    width: 400px;
+    height: 300px;
+    margin-top: 14vw;
+    margin-left: 13vw;
+    display: inline-block;
+}
+.productCardRight{
+    width: 400px;
+    height: 300px;
+    margin-top: 14vw;
+    margin-right: 13vw;
+    display: inline-block;
 }
