@@ -3,11 +3,12 @@
 }
 
 .productsBackground{
-    background-color: #00236A;
+    background-color: rgba(0, 35, 106,1);
     height: 90%;
     width: 100%;
     overflow: hidden;
     position: absolute;
+    opacity: 1;
 }
 .elementsSVG{
     width: 128vw;
@@ -15,6 +16,11 @@
     margin-left: -12vw;
     margin-top: -11.4vw;
     position: absolute;
+}
+
+#elementsSVGSecond{
+    opacity: 0;
+    background-color: #d0d5e0;
 }
 
 .rectangleSVG{
@@ -58,7 +64,7 @@
 
 .productCards{
     overflow-y: scroll;
-    height: 100%;
+    height: 90%;
     width: 100%;
     position:absolute;
 
