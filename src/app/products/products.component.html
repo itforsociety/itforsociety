@@ -15,48 +15,35 @@
         
         <svg id="elementsSVGFirst" class="elementsSVG" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2494.825 1540.951" style="opacity:1">
             <g id="Group_3" data-name="Group 3" transform="translate(227.825 246.476)">
-              <rect id="Rectangle_2" data-name="Rectangle 2" width="939" height="926" rx="21" transform="matrix(0.995, 0.105, -0.105, 0.995, -131.031, -109.54)" fill="#f6f6f6" opacity="0.85"/>
+              <rect id="Rectangle_1" data-name="Rectangle 2" width="939" height="926" rx="21" transform="matrix(0.995, 0.105, -0.105, 0.995, -131.031, -109.54)" fill="#f6f6f6" opacity="0.85"/>
               <path id="Polygon_1" data-name="Polygon 1" d="M654.763,19.319a13,13,0,0,1,22.475,0l643.4,1106.144A13,13,0,0,1,1309.4,1145H22.6a13,13,0,0,1-11.237-19.536Z" transform="matrix(0.208, -0.978, 0.978, 0.208, 159.041, 1056.417)" fill="#f6f6f6" opacity="0.85"/>
               <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="489.5" cy="484.5" rx="489.5" ry="484.5" transform="translate(1288 176)" fill="#f6f6f6" opacity="0.85"/>
             </g>
         </svg>
         <svg id="elementsSVGSecond" class="elementsSVG" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2494.825 1540.951" style="opacity:0">
-          <g id="Group_3" data-name="Group 3" transform="translate(227.825 246.476)">
+          <g id="Group_3_2" data-name="Group 3" transform="translate(227.825 246.476)">
             <rect id="Rectangle_2" data-name="Rectangle 2" width="939" height="926" rx="21" transform="matrix(0.995, 0.105, -0.105, 0.995, -131.031, -109.54)" fill="rgba(0, 35, 106,1)" opacity="0.85"/>
-            <path id="Polygon_1" data-name="Polygon 1" d="M654.763,19.319a13,13,0,0,1,22.475,0l643.4,1106.144A13,13,0,0,1,1309.4,1145H22.6a13,13,0,0,1-11.237-19.536Z" transform="matrix(0.208, -0.978, 0.978, 0.208, 159.041, 1056.417)" fill="rgba(0, 35, 106,1)" opacity="0.85"/>
-            <ellipse id="Ellipse_1" data-name="Ellipse 1" cx="489.5" cy="484.5" rx="489.5" ry="484.5" transform="translate(1288 176)" fill="rgba(0, 35, 106,1)" opacity="0.85"/>
+            <path id="Polygon_2" data-name="Polygon 1" d="M654.763,19.319a13,13,0,0,1,22.475,0l643.4,1106.144A13,13,0,0,1,1309.4,1145H22.6a13,13,0,0,1-11.237-19.536Z" transform="matrix(0.208, -0.978, 0.978, 0.208, 159.041, 1056.417)" fill="rgba(0, 35, 106,1)" opacity="0.85"/>
+            <ellipse id="Ellipse_2" data-name="Ellipse 1" cx="489.5" cy="484.5" rx="489.5" ry="484.5" transform="translate(1288 176)" fill="rgba(0, 35, 106,1)" opacity="0.85"/>
           </g>
       </svg>
     </div>
 
     <div class="productCards" (scroll)="scrollEffect()">
       <div class="productCardsFirst">
-          <mat-card class="productCardLeft" color="accent">
+          <div class="productCardLeft" color="accent">
             <a routerLink="/products">
-              <div class="story-image" style="background-image: url('');"></div>
+              <iframe class="productCardVideo" src="https://www.youtube.com/embed/bpwAngIRaDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </a>
-          </mat-card>
+          </div>
 
           <span class="fill-remaining-space"></span>
 
-          <mat-card class="productCardRight" color="accent">
-            <mat-card-header class="story-header">
-              <div mat-card-avatar class="story-header-image" style="background-image: url('');"></div>
-              <mat-card-title>Brand Design</mat-card-title>
-              <mat-card-subtitle>We are here to help you with full desing</mat-card-subtitle>
-            </mat-card-header>
-            <a routerLink="/products">
-              <div class="story-image" style="background-image: url('');"></div>
-            </a>
-            <mat-card-content class="story-content-text">
-              <p>
-                  from logo, fonts and complete good look of your product
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <a mat-button routerLink="/products">READ MORE</a>
-            </mat-card-actions>
-          </mat-card>
+          <div class="productCardRight" color="accent">
+            <h1 class="productCardTitle">UX/UI Design</h1>
+            <p class="productCardContent">We are here to help you design your project from start to end...</p>
+            <a mat-button routerLink="/products">READ MORE</a>
+          </div>
       </div>
 
       <div class="productCardsSecond">

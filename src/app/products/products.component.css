@@ -2,6 +2,25 @@
     height: 90%;
 }
 
+body, h1, h2, h3, h4, h5, h6  {
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+  }
+
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 35, 106,1); 
+  }
+
 .productsBackground{
     background-color: rgba(0, 35, 106,1);
     height: 90%;
@@ -27,6 +46,9 @@
     position: absolute;
     width:1030.649px;
     height:1019.08px;
+}
+#Rectangle_1{
+    margin-top: 2vw;
 }
 .rectangle{
     width:52vw;
@@ -69,6 +91,7 @@
     position:absolute;
 
 }
+
 .productCardsFirst{
     display: flex;
     height: 100%;
@@ -78,17 +101,31 @@
     height: 110%;
 }
 
+.productCardTitle{
+    font-size: 6vw;
+    font-weight: bold;
+    height: 5vw;
+}
+.productCardContent{
+    font-size:medium;
+    color: #6B6B6B;
+}
+
+.productCardVideo{
+    width:50vw;
+    height:31vw;
+}
 .productCardLeft{
-    width: 400px;
+    width: auto;
     height: 300px;
-    margin-top: 14vw;
-    margin-left: 13vw;
+    margin-top: 7vw;
+    margin-left: 5vw;
     display: inline-block;
 }
 .productCardRight{
-    width: 400px;
+    width: auto;
     height: 300px;
     margin-top: 14vw;
-    margin-right: 13vw;
+    margin-right: 5vw;
     display: inline-block;
 }
