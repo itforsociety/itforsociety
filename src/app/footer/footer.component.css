@@ -10,3 +10,12 @@
 .fb-like{
     width: auto;
 }
+
+.footer-row-center{
+    width: 310px;
+    display: flex;
+    font-size: 13pt;
+}
+.contact{
+    margin-top:-20px;
+}

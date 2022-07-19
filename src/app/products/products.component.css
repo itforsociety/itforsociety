@@ -2,7 +2,7 @@
     height: 90%;
 }
 
-body, h1, h2, h3, h4, h5, h6  {
+body,div, h1, h2, h3, h4, h5, h6  {
     font-family: "Trebuchet MS", Tahoma, sans-serif;
   }
 
@@ -107,8 +107,12 @@ body, h1, h2, h3, h4, h5, h6  {
     height: 5vw;
 }
 .productCardContent{
-    font-size:medium;
+    font-size: medium;
     color: #6B6B6B;
+    background-color: #d0d5e0;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: 2px 3px 4px #6b6b6b;
 }
 
 .productCardVideo{
@@ -123,9 +127,45 @@ body, h1, h2, h3, h4, h5, h6  {
     display: inline-block;
 }
 .productCardRight{
-    width: auto;
-    height: 300px;
+    width: 36vw;
+    height: 30vw;
     margin-top: 14vw;
     margin-right: 5vw;
     display: inline-block;
+}
+
+.productCardLeftPair{
+    width: 37vw;
+    height: 30vw;
+    margin-top: 14vw;
+    margin-left: 5vw;
+    display: inline-block;
+}
+
+.animateCircle{
+    fill: #092458;
+    transform: translate(1092.71px, -37.667px) !important;
+    opacity: 1;
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
+    transition: all 2s;
+}
+
+
+.productCardLogoVideoOuter{
+    width: 30vw;
+    height: 30vw;
+    margin-left: 5.1vw;
+    margin-top: -3vw;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.productCardLogoVideo{
+    width: 0px;
+    transition: width 3s;
+}
+.productCardLogoVideoShow{
+    width: 54vw;
+    height: auto;
+    transition: width 3s;
 }
