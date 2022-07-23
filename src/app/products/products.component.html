@@ -1,5 +1,5 @@
-<div class="products">
-    <div class="productsBackground">
+<div id="products" class="products">
+    <div id="productsBackgroundElements" class="productsBackground">
         <svg id="elementsSVGFirst" class="elementsSVG" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 2494.825 1540.951" style="opacity:1">
             <g id="Group_3" data-name="Group 3" transform="translate(227.825 246.476)">
               <rect id="Rectangle_1" data-name="Rectangle 2" width="939" height="926" rx="21" transform="matrix(0.995, 0.105, -0.105, 0.995, -131.031, -109.54)" fill="#f6f6f6" opacity="0.85"/>
@@ -17,38 +17,122 @@
     </div>
 
     <div class="productCards" (scroll)="scrollEffect()">
-      <div class="productCardsFirst">
-          <div class="productCardLeft" color="accent">
-            <a routerLink="/products">
-              <iframe class="productCardVideo" src="https://www.youtube.com/embed/bpwAngIRaDQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </a>
+      <div id="productCardsFirst1" class="productCardsFirst">
+
+          <div id="productCardsLeft1" class="productCardLeft" color="accent">
+              <iframe class="productCardVideo" src="https://www.youtube.com/embed/tglDk7Wf-oI?&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; mute" allowfullscreen autoplay="1"></iframe>
           </div>
 
-          <span class="fill-remaining-space"></span>
-
-          <div class="productCardRight" color="accent">
-            <div class="productCardTitle">UX/UI Design</div>
-            <div class="productCardContent">We are here to help you from ideation and story creation to full digital product concept. Creating an easy, intuitive, efficient, and beautiful User Interface (UI). Focusing on intuitivity and usability to get great User Experience (UX) which is based on deep analysis and social relationships.</div>
+          <div class="productCardRightWrapper">
+            <div id="productCardRight1" class="productCardRight" color="accent">
+              <div class="productCardTitle">UX/UI Design</div>
+              <div class="productCardContent">From ideation and story creation to full digital product concept. Creating an easy, intuitive, efficient, and beautiful User Interface (UI). Focusing on intuitivity and usability to get great User Experience (UX) which is based on deep analysis and social relationships. Well-designed content helps your user to easilly interact with a product, which leads to a great experience.
+              </div>
+              <a mat-button (click)="jumpToScroll('productCardsThird3')">READ MORE</a>
+            </div>
           </div>
+
       </div>
 
-      <div class="productCardsSecond">
-          <div class="productCardLeftPair" color="accent">
-            <div class="productCardTitle">Brand Design</div>
-            <div class="productCardContent">We are here to help you with any other design needs for your product. From logo, font, colors and complete brand design guidelines.</div>
+      <div id="productCardsSecond2" class="productCardsSecond">
+          <div class="productCardRightWrapper">
+            <div id="productCardLeftPair2" class="productCardLeftPair" color="accent">
+              <div id="productCardTitle2" class="productCardTitle">Brand Design</div>
+              <div id="productCardContent2" class="productCardContent">We are here to help you with any other design needs for your product. From logo, font, icons, colors and complete brand design guidelines.</div>
+              <a mat-button (click)="jumpToScroll('productCardsThird3')">READ MORE</a>
+            </div>
           </div>
-
+          <!-- 
           <span class="fill-remaining-space"></span>
 
-          <div class="productCardRight" color="accent">
+          <div id="productCardRight2" class="productCardRight" color="accent">
               <div class="productCardLogoVideoOuter">
                 <video id="productCardLogoVideo" class="productCardLogoVideo">
                   <source src="../../assets/video/Windmills - Google Chrome 2022-07-06 13-02-58.mp4" type="video/mp4">
                 </video>
               </div>
               <a mat-button (click)="animateCircle()">LOGO DESIGN</a>
+          </div> 
+          -->
+          
+          <div id="productCardsLeft1" class="productCardLeft" color="accent">
+            <iframe class="productCardVideo" src="https://www.youtube.com/embed/tglDk7Wf-oI?&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; mute" allowfullscreen autoplay="1"></iframe>
           </div>
       </div>
+
+      <mat-card  id="productCardsThird3" class="productCardsThird">
+          <div id="productCardTitle3" class="productCardTitle">From Idea to Product</div>
+          <div class="productCardWrapper">
+            <div id="productCardLeft3" class="productCard3" color="accent">
+                Defining Information Architecture and Requiremnts Gathering
+                <ul>
+                  <li>gathering project requirements</li>
+                  <li>holding stakeholder meetings and workshops</li>
+                  <li>analyse user research and tracking data</li>
+                  <li>defining the required information architecture</li>
+                  <li>defining Scope</li>
+                </ul>
+                Creating Storyboards 
+                <ul> 
+                  <li>creating the ideal user journey map</li>
+                  <li>visual representation of your customers’ interactions with your brand</li>
+                  <li>user research</li>
+                </ul>
+                Defining Main Features
+                <ul>
+                  <li>Consulting and collaborating with clients to design the features for whole interface, user testing, user flows, user stories and preparing the features for development while assuring design quality</li>
+                </ul>
+                Creating Design Project Plan 
+                <ul>
+                  <li>Creating desired plan and timeline of all features and services.</li>
+                </ul>
+            </div>
+              <div id="productCardCenter3" class="productCard3">
+                Defining Colors
+                <ul>
+                <li> Finding the feeling of the product in the colors and defining the color pallet tailored to customer needs.</li>
+                </ul>
+                Defining Typography 
+                <ul>
+                <li> Finding the feeling of the product in the Typography and defining the main font,secondary and backup fonts with all rules to be applied</li>
+                </ul>
+                Creating Logo 
+                <ul>
+                <li> Creating 3 versions of logo acording to product research and information</li>
+                </ul>
+                Creating Brand guideline 
+                <ul>
+                <li> Merging logo, fonts, colors and design rules to one document as a perfect refference to any further designing part of the product</li>
+                </ul>
+                Creating mockups
+                <ul>
+                <li> Creating hierarchy and navigation, mocking up first slides with look and feel of application</li>
+                </ul>
+                Creating UX/UI Prototype
+                <ul>
+                </ul>
+                User Acceptance Testing of the prototype
+                <ul></ul>            
+              </div>
+
+              <div id="productCardRight3" class="productCard3" color="accent">
+                <div class="productCardContent3">
+                  <h1>Taking Full Development Ownership</h1>
+                  <li>Taking full ownership of digital experience from prototype through development to ready to go-live application</li>
+                  <ul> Defining application environment and architecture</ul>
+                  <li> backend technology</li>
+                  <li> frontend technology</li>
+                  <li> project mehodology (agile scrum, waterfall) </li>
+                  <ul> Defining Main Features </ul>
+                  <ul> Creating Development Project Plan</ul>        
+                  <ul> Developing the application</ul>            
+                  <ul> User Acceptance Testing of the application</ul>            
+                  <ul> Creating Documentation</ul>
+                </div>
+              </div>
+          </div>
+        </mat-card>
+        
     </div>
 </div>
   

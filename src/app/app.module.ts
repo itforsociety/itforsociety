@@ -47,7 +47,7 @@ const routes: Routes = [
     component: QuotesComponent
   },
   {
-    path: 'products',
+    path: 'services',
     component: ProductsComponent
   },
   {

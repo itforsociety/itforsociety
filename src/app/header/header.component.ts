@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import * as $ from 'jquery';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,14 +10,27 @@ import * as $ from 'jquery';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
   darkModeChecked = true;
   darkThemeName = "unicorn-app-theme.scss";
   lightThemeName = "my-indigo-pink";
 
   ngOnInit(): void {
+    console.log("onInit")
+    this.onChanges();
   }
-
+  onChanges(): void{
+    const header = document.getElementById("header") as HTMLElement;
+    const footer = document.getElementById("footer") as HTMLElement;
+    if(this.router.url == '/services' ){
+      header.style.background = "#1B6488";
+      footer.style.background = "#1B6488";
+    }
+    else{
+        header.style.background = null;
+        footer.style.background = null;
+    }
+  }
 /*   changeTheme(themeName) {
    var elemCSS =  document.getElementById('themeAsset');
    elemCSS.setAttribute ('href','../assets/css/' + themeName + '.css');
@@ -39,3 +53,4 @@ export class HeaderComponent implements OnInit {
   }
 
 }
+

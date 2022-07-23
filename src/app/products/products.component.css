@@ -1,6 +1,14 @@
 .products{
     height: 90%;
 }
+:host .mat-slide-toggle-label{
+    display: none;
+}
+
+.mat-toolbar.mat-primary{
+    background-color: #1B6488 !important;
+}
+
 
 body,div, h1, h2, h3, h4, h5, h6  {
     font-family: "Trebuchet MS", Tahoma, sans-serif;
@@ -13,7 +21,7 @@ body,div, h1, h2, h3, h4, h5, h6  {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: transparent; 
+    background: #d0d5e0; 
   }
    
   /* Handle */
@@ -89,58 +97,84 @@ body,div, h1, h2, h3, h4, h5, h6  {
     height: 90%;
     width: 100%;
     position:absolute;
-
 }
 
 .productCardsFirst{
     display: flex;
-    height: 100%;
+    flex-wrap: wrap;
+    justify-content:center;
+    min-height: 100%;
 }
 .productCardsSecond{
     display: flex;
-    height: 110%;
+    flex-wrap: wrap;
+    justify-content:center;
+    min-height: 110%;
+}
+.productCardsThird{
+    height: auto;
+    min-height: 110%;
 }
 
 .productCardTitle{
-    font-size: 6vw;
+    font-size: 4.2vw;
     font-weight: bold;
     height: 5vw;
 }
 .productCardContent{
-    font-size: medium;
+    font-size: 12pt;
     color: #6B6B6B;
-    background-color: #d0d5e0;
     padding: 10px;
     border-radius: 7px;
-    box-shadow: 2px 3px 4px #6b6b6b;
 }
 
 .productCardVideo{
-    width:50vw;
-    height:31vw;
+    width: 38.93vw;
+    height: 20.72vw;
+    border-radius: 41px;
+    box-shadow: 4px 8px 20px grey;
+    min-width: 420px;
+    min-height: 240px;
 }
 .productCardLeft{
     width: auto;
     height: 300px;
-    margin-top: 7vw;
-    margin-left: 5vw;
+    margin-top: 10vw;
+    /* margin-left: 5vw; */
     display: inline-block;
+    min-width: 420px;
+    min-height: 240px;
 }
-.productCardRight{
+.productCardRightWrapper{
     width: 36vw;
     height: 30vw;
     margin-top: 14vw;
-    margin-right: 5vw;
     display: inline-block;
+    min-width: 420px;
+}
+
+.productCardRight{
+    width: 30vw;
+    height: 30vw;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    min-width: 420px;
+    min-height: 240px;
 }
 
 .productCardLeftPair{
-    width: 37vw;
+    width: 28vw;
     height: 30vw;
-    margin-top: 14vw;
-    margin-left: 5vw;
-    display: inline-block;
+    display: inline-block; 
+    color: white;
+    min-width: 420px;
+    min-height: 240px;
 }
+
+#productCardContent2{
+    color: white;
+}
+
 
 .animateCircle{
     fill: #092458;
@@ -168,4 +202,22 @@ body,div, h1, h2, h3, h4, h5, h6  {
     width: 54vw;
     height: auto;
     transition: width 3s;
+}
+
+#productCardTitle3{
+    width: 100%;
+    text-align: center;
+    margin-top: 2vw;
+}
+
+.productCardWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.productCard3{
+    width: 450px;
+    height: 530px;
+    display: inline-block;
+    padding: 1.2vw;
 }
