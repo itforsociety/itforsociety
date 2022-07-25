@@ -18,6 +18,9 @@
 ::ng-deep .mat-slide-toggle-label{
   flex-direction: row-reverse !important;
 }
+::ng-deep #header{
+  color:white;
+}
 
 
 @media (max-width:500px){

@@ -27,6 +27,8 @@ import { Story3sitemapComponent } from './story/custom/story3sitemap/story3sitem
 import { Story1sdgComponent } from './story/custom/story1sdg/story1sdg.component';
 import { QuoteComponent } from './quote/quote.component';
 import { ProductsComponent } from './products/products.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { PopupComponent } from './popup/popup.component';
 
 
 const routes: Routes = [
@@ -53,6 +55,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactFormComponent
+  },
+  {
+    path: 'privacy',
+    component: PrivacyComponent
   },
   {
     path: 'story/:story_id/:story_tag',
@@ -92,7 +98,9 @@ const routes: Routes = [
     Story3sitemapComponent,
     Story1sdgComponent,
     QuoteComponent,
-    ProductsComponent
+    ProductsComponent,
+    PrivacyComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

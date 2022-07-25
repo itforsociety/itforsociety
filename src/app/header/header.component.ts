@@ -14,15 +14,18 @@ export class HeaderComponent implements OnInit {
   darkModeChecked = true;
   darkThemeName = "unicorn-app-theme.scss";
   lightThemeName = "my-indigo-pink";
+  ifWaitForRouterChange = true;
 
   ngOnInit(): void {
-    console.log("onInit")
-    this.onChanges();
+    console.log("onInit");
+    this.onChanges(false);
   }
-  onChanges(): void{
+  onChanges(el: boolean): void{
+    console.log("Check Header Color");
+    this.ifWaitForRouterChange = el;
     const header = document.getElementById("header") as HTMLElement;
     const footer = document.getElementById("footer") as HTMLElement;
-    if(this.router.url == '/services' ){
+    if(this.router.url == '/services' && !this.ifWaitForRouterChange){
       header.style.background = "#1B6488";
       footer.style.background = "#1B6488";
     }
