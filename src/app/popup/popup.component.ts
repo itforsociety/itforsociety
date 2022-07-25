@@ -17,16 +17,13 @@ export class PopupComponent implements OnInit {
 
   }
   removePopup(){
-    
+
   }
 
   
 
 
   ngOnInit(): void {
-    this.openSnackBar('we use cookies for Google Analytics. If you reject the cookies we will stop GA usage.',
-        'Reject'
-      )
   }
 
 }
