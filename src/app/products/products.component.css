@@ -1,5 +1,5 @@
 .products{
-    height: 90%;
+    height: 94%;
 }
 :host .mat-slide-toggle-label{
     display: none;
@@ -20,18 +20,18 @@ body,div, h1, h2, h3, h4, h5, h6  {
   }
   
   /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: #d0d5e0; 
   }
    
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: rgba(0, 35, 106,1); 
   }
 
 .productsBackground{
     background-color: rgba(0, 35, 106,1);
-    height: 90%;
+    height: 94%;
     width: 100%;
     overflow: hidden;
     position: absolute;
@@ -94,7 +94,8 @@ body,div, h1, h2, h3, h4, h5, h6  {
 
 .productCards{
     overflow-y: scroll;
-    height: 90%;
+    overflow-x: hidden;
+    height: 94%;
     width: 100%;
     position:absolute;
 }
@@ -221,3 +222,90 @@ body,div, h1, h2, h3, h4, h5, h6  {
     display: inline-block;
     padding: 1.2vw;
 }
+
+#productCardsThird3{
+    border-radius: 0px;
+}
+
+
+
+@media (max-width:1000px){
+
+
+    
+
+    .productCardTitle {
+        font-size: 4.4vw;
+        font-weight: bold;
+        height: 7vw;
+        margin-left: 1.4vw;
+    }
+    .productCardLeft {
+        width: 100%;
+        height: 51vw;
+        margin-top: 0px;
+
+    }
+    .productCardVideo{
+        width: 100%;
+        height: 51vw;
+        border-radius: 0px;
+    }
+
+    .productCardsFirst{
+        min-height: auto;
+        min-height: 110%;
+    }
+
+    .elementsSVG {
+        width: 262vw;
+    height: 171vw;
+    margin-left: -72vw;
+    margin-top: -12.4vw;
+    position: absolute;
+    transform: rotate(90deg);
+    }
+
+    .productCardRight{
+        margin-left: 6vw;
+        margin-right: 1vw;
+        min-width: 370px;
+        min-height: 213px;
+    }
+    
+
+    .productCardContent {
+        font-size: 10pt;
+        color: black;
+        padding: 10px;
+        border-radius: 7px;
+        background-color: ghostwhite;
+        opacity: 0.9;
+    }
+    .productCardRightWrapper {
+        width: 36vw;
+        height: 100vw;
+        margin-top: 10vw;
+        display: inline-block;
+        min-width: 420px;
+    }
+
+    #productCardsLeft2{
+        margin-top: -176vw;
+        min-width: 390px;
+    }
+    #productCardLeftPair2{
+        margin-top: 54vw;
+        margin-left: 6vw;
+        margin-right: 1vw;
+        min-width: 370px;
+        min-height: 213px;
+    }
+    #productCardContent2{
+        color:black;
+
+    }
+
+    
+  
+  }

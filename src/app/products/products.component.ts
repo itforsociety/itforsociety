@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HeaderComponent } from '../header/header.component';
+import { Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-products',
@@ -8,9 +8,11 @@ import { HeaderComponent } from '../header/header.component';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor() {
-    
-   }
+  constructor(
+    private meta:Meta,
+    private title:Title
+    ) 
+  { }
    Ellipse_2: HTMLElement = document.getElementById("Ellipse_2");
    scrollValue = 0;
    matrixValue = -109.54;
@@ -89,6 +91,15 @@ export class ProductsComponent implements OnInit {
       );
     }
     ngOnInit(): void {
+      this.title.setTitle("UX UI Design" + " | IT for Society");
+      this.meta.updateTag({ name: "title", content: "UX UI Design" + " | IT for Society" });
+      this.meta.updateTag({ name: "description", content: "Creating an easy, intuitive, efficient, and beautiful appication User Interface (UI) and User Experience (UX)" });
+      this.meta.updateTag({ property: "og:title",content: "UX UI Design" + " | IT for Society"});
+      this.meta.updateTag({ property: "og:url",content: "https://itforsociety.com/services"});
+      this.meta.updateTag({ property: "og:description",content: "Creating an easy, intuitive, efficient, and beautiful appication User Interface (UI) and User Experience (UX)"});
+      this.meta.updateTag({ name: "twitter:title",content: "UX UI Design" + " | IT for Society"});
+      this.meta.updateTag({ name: "twitter:url",content: "https://itforsociety.com/services"});
+      this.meta.updateTag({ name: 'twitter:description', content: "Creating an easy, intuitive, efficient, and beautiful appication User Interface (UI) and User Experience (UX)" });
       const header = document.getElementById("header") as HTMLElement;
       const footer = document.getElementById("footer") as HTMLElement;
       const products = document.getElementById("products") as HTMLElement;

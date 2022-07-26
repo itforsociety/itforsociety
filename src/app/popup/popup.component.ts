@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-popup',
@@ -8,22 +7,32 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class PopupComponent implements OnInit {
 
-  constructor(private _snackBar: MatSnackBar) {}
+  constructor() {}
 
-  openSnackBar(message: string, action: string) {
-    this._snackBar.open(message, action);
-  }
+  cookiesOK = localStorage.getItem("cookiesOK");
+
+
   disableCookies(){
-
+    localStorage.setItem("cookiesOK","Remove Cookies"); 
+    window['ga-disable-GA_MEASUREMENT_ID'] = true;   
+    const cookies = document.getElementById("cookies") as HTMLElement;
+    cookies.style.display = "none";
   }
   removePopup(){
-
+    localStorage.setItem("cookiesOK","OK");
+    window['ga-disable-GA_MEASUREMENT_ID'] = false;     
+    const cookies = document.getElementById("cookies") as HTMLElement;
+    cookies.style.display = "none";
   }
 
   
 
 
   ngOnInit(): void {
+    const cookies = document.getElementById("cookies") as HTMLElement;
+    if(this.cookiesOK == "OK"){
+      cookies.style.display = "none";
+    }
   }
 
 }
