@@ -21,6 +21,7 @@ mat-form-field {
 .pupupMessage{
     font-size: 9pt;
     flex: 100%;
+    line-height: initial;
 }
 
 .buttonPopup{
@@ -31,4 +32,17 @@ mat-form-field {
 
 .buttonPopupSecond{
     font-size:8pt;
+}
+
+
+
+@media (max-width:1000px){
+
+    .popup{
+        width: 407px;
+    }
+    .buttonPopup {
+        width: 138px;
+    }
+
 }
