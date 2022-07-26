@@ -34,7 +34,6 @@ export class ProductsComponent implements OnInit {
     Ellipse_2.classList.remove("animateCircle");
     //myVideo.classList.remove("productCardLogoVideoShow");
     //myVideo.pause();
-    console.log(this.Ellipse_2,"translate( " + (1288 + this.scrollValue/2) + ", " + (176+this.scrollValue/2) +")" + "<br>Vertically: " + scrollElement.scrollTop.toString() + "scrollValue" + this.scrollValue + "matrix(" + (0.208 + (this.scrollValue/2)) +", " + (-0.978 + (this.scrollValue/2)) + "," + (0.978+ (this.scrollValue/2)) + "," + (0.708 + (this.scrollValue/2)) + "," + (159.041 + (this.scrollValue/2)) + "," + 1056.417 +")");
     this.matrixValue = -109.54 + this.scrollValue/10;
     this.scrollValue = scrollElement.scrollTop;
     var y = 1 - this.scrollValue/ 850;
