@@ -196,6 +196,23 @@ body,div, h1, h2, h3, h4, h5, h6  {
     border-radius: 0px;
 }
 
+.contactUsWrapper{
+    margin-top: 5vw;
+    display: flex;
+    flex:100%;
+    justify-content: center;
+}
+
+.note{
+    width: 30vw;
+    font-style: italic;
+    margin-left: 20px;
+}
+
+.contactUsButton{
+    height: 36px;
+}
+
 
 
 @media (max-width:1000px){
