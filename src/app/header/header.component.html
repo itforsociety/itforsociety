@@ -4,14 +4,14 @@
 
     <a mat-button id="matButton1" class="matButton" routerLink="/home">Home</a>
     
-    <button mat-button [matMenuTriggerFor]="belowMenu">Stories</button>
+    <button id="matButton2" mat-button [matMenuTriggerFor]="belowMenu">Stories</button>
     <mat-menu #belowMenu="matMenu" yPosition="below">
         <a mat-menu-item routerLink="/stories" (click)=onChanges(true)>Stories</a>
         <a mat-menu-item routerLink="/quotes" (click)=onChanges(true)>Quotes</a>
     </mat-menu>
     <a mat-button id="matButton3" class="matButton" routerLink="/services" >Services</a>
-    <a mat-button id="matButton3" class="matButton" routerLink="/contact">Contact</a>
-    <a mat-button id="matButton4" class="matButton" routerLink="/todo" style="display: none;">Todo</a>
+    <a mat-button id="matButton4" class="matButton" routerLink="/contact">Contact</a>
+    <a mat-button id="matButton5" class="matButton" routerLink="/todo" style="display: none;">Todo</a>
     <span class="fill-remaining-space"></span>
     
     <mat-slide-toggle (change)="darkMode()" [(ngModel)]="darkModeChecked"

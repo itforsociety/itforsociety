@@ -28,5 +28,11 @@
   #matButton1{
     display: none;
   }
+  #matButton4{
+    display: none;
+  }
+  .example-margin {
+    width: 60px;
+}
 
 }
