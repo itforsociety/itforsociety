@@ -106,10 +106,6 @@ body,div, h1, h2, h3, h4, h5, h6  {
     min-width: 420px;
     min-height: 240px;
 }
-
-#productCardVideo2{
-    width:36.9vw
-}
 .productCardLeft{
     width: auto;
     height: 300px;
