@@ -35,6 +35,7 @@ export class ProductsComponent implements OnInit {
     Ellipse_2.classList.remove("animateCircle");
     //myVideo.classList.remove("productCardLogoVideoShow");
     //myVideo.pause();
+    //merge change
     if (this.scrollValue > scrollElement.scrollTop && document.getElementsByTagName("html")[0].scrollTop != 0){
       $("html").animate({scrollTop:0}, 200, 'swing', function() { 
         $("html").stop();
