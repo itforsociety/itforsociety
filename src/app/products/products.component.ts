@@ -29,14 +29,23 @@ export class ProductsComponent implements OnInit {
     const Polygon_1 = document.getElementById("Polygon_1") as HTMLElement;
     const Polygon_2 = document.getElementById("Polygon_2") as HTMLElement;
     const Ellipse_1 = document.getElementById("Ellipse_1") as HTMLElement;
-    const Ellipse_2 = document.getElementById("Ellipse_2") as HTMLElement;
+    const Ellipse_2 = document.getElementById("Ellipse_2") as HTMLElement; 
+    var myVideo2 = document.getElementById("productCardVideo2") as HTMLIFrameElement;
     //var myVideo = document.getElementById("productCardLogoVideo") as HTMLVideoElement;
     Ellipse_2.classList.remove("animateCircle");
     //myVideo.classList.remove("productCardLogoVideoShow");
     //myVideo.pause();
+    //merge change
     if (this.scrollValue > scrollElement.scrollTop && document.getElementsByTagName("html")[0].scrollTop != 0){
-      $("html").animate({scrollTop:0}, 300, 'swing', function() { 
+      $("html").animate({scrollTop:0}, 200, 'swing', function() { 
+        $("html").stop();
      });
+    }
+    console.log(document.getElementsByClassName("productCards")[0].scrollTop)
+    if (document.getElementsByClassName("productCards")[0].scrollTop > 530 ){
+      if (!myVideo2.src.includes("autoplay")){
+        myVideo2.src += "&autoplay=1";
+      }
     }
     this.matrixValue = -109.54 + this.scrollValue/10;
     this.scrollValue = scrollElement.scrollTop;
