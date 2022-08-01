@@ -36,11 +36,15 @@ export class ProductsComponent implements OnInit {
     //myVideo.classList.remove("productCardLogoVideoShow");
     //myVideo.pause();
     if (this.scrollValue > scrollElement.scrollTop && document.getElementsByTagName("html")[0].scrollTop != 0){
-      $("html").animate({scrollTop:0}, 300, 'swing', function() { 
+      $("html").animate({scrollTop:0}, 200, 'swing', function() { 
+        $("html").stop();
      });
     }
-    if (document.getElementsByClassName("productCards")[0].scrollTop == 530){
-      myVideo2.src += "&autoplay=1";
+    console.log(document.getElementsByClassName("productCards")[0].scrollTop)
+    if (document.getElementsByClassName("productCards")[0].scrollTop > 530 ){
+      if (!myVideo2.src.includes("autoplay")){
+        myVideo2.src += "&autoplay=1";
+      }
     }
     this.matrixValue = -109.54 + this.scrollValue/10;
     this.scrollValue = scrollElement.scrollTop;
