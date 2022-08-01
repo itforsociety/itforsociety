@@ -41,7 +41,6 @@ export class ProductsComponent implements OnInit {
         $("html").stop();
      });
     }
-    console.log(document.getElementsByClassName("productCards")[0].scrollTop)
     if (document.getElementsByClassName("productCards")[0].scrollTop > 530 ){
       if (!myVideo2.src.includes("autoplay")){
         myVideo2.src += "&autoplay=1";
