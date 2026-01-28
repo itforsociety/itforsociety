@@ -34,7 +34,9 @@ jobs:
       continue-on-error: true
 
     - name: Build for production
-      run: npm run build -- --prod
+      env:
+        NODE_OPTIONS: --openssl-legacy-provider
+      run: npm run build -- --configuration production
 
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
