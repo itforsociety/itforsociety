@@ -1,0 +1,6 @@
+@import '../css/pink-bluegrey.css';
+
+.theme-primary{
+    background: #63BB7F;
+    color: #fff;
+}

@@ -1,0 +1,64 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+
+
+
+//Set color pallet
+$its-main-palette: (
+ 50: #e8f5ec,
+ 100: #c7e6d0,
+ 200: #a3d6b3,
+ 300: #7ec795,
+ 400: #63bb7f,
+ 500: #48af69,
+ 600: #40a05f,
+ 700: #378e53,
+ 800: #307d48,
+ 900: #215d34,
+ contrast: (
+   50: #F6E5CB,
+   100: rgba(black, 0.87),
+   200: rgba(black, 0.87),
+   300: white,
+   // ... continues to 900
+ )
+);
+// Define the default theme (same as the example above).
+$its-app-primary: mat-palette($its-main-palette,700);
+$its-app-accent:  mat-palette($its-main-palette,contrast(50));
+$its-app-theme:   mat-dark-theme($its-app-primary, $its-app-accent);
+
+// The warn palette is optional (defaults to red).
+$its-app-warn:    mat-palette($mat-red);
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as `color` or `typography`.
+$its-app-theme: mat-dark-theme((
+  color: (
+    primary: $its-app-primary,
+    accent: $its-app-accent,
+    warn: $its-app-warn,  
+  )
+));
+
+// Include the default theme styles.
+@include angular-material-theme($its-app-theme);
+
+
+// Define an alternate light theme.
+$light-primary: mat-palette($its-main-palette,500);
+$light-accent:  mat-palette($mat-amber, A200, A100, A400);
+$light-warn:    mat-palette($mat-deep-orange);
+$light-theme:   mat-light-theme($light-primary, $light-accent, $light-warn);
+
+// Include the alternative theme styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.unicorn-light-theme` will be affected by this alternate light theme instead of the default theme.
+.its-light-theme {
+  @include angular-material-theme($light-theme);
+}
