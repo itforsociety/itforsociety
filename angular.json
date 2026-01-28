@@ -26,7 +26,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/css/unicorn-app-theme.scss"
+              "src/assets/css/unicorn-app-theme.scss",
+              "src/assets/css/pink-bluegrey.css",
+              "src/assets/css/my-pink-bluegrey.css"
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.min.js"
