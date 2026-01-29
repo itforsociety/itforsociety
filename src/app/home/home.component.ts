@@ -22,23 +22,23 @@ export class HomeComponent implements OnInit {
     this.meta.updateTag({ name: "twitter:url",content: "https://itforsociety.com/home"});
     this.meta.updateTag({ name: 'twitter:description', content: "Use IT for positive impact on society" });
    }
-  ITsImageURL = "/itforsociety/assets/IT for society transparent inverted.png"
+  ITsImageURL = "../../assets/IT for society transparent inverted.png"
 
   ngOnInit(): void {
     
 
     if(localStorage.getItem("themeAsset") == "light"){
-      $('.ITsImage').attr("src","/itforsociety/assets/IT for society transparent.png")
+      $('.ITsImage').attr("src","../../assets/IT for society transparent.png")
     }
     else{
-      $('.ITsImage').attr("src","/itforsociety/assets/IT for society transparent inverted.png")
+      $('.ITsImage').attr("src","../../assets/IT for society transparent inverted.png")
     }
     $('head').on('change', "#themeAsset", function() {
       if(localStorage.getItem("themeAsset") == "light"){
-        $('.ITsImage').attr("src","/itforsociety/assets/IT for society transparent.png")
+        $('.ITsImage').attr("src","../../assets/IT for society transparent.png")
       }
       else{
-        $('.ITsImage').attr("src","/itforsociety/assets/IT for society transparent inverted.png")
+        $('.ITsImage').attr("src","../../assets/IT for society transparent inverted.png")
       }
     });
   }
