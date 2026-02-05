@@ -1,14 +1,2 @@
-# Static HTML pages for SEO
-/home             /home.html           200
-/stories          /stories.html        200
-/services         /services.html       200
-/quotes           /quotes.html         200
-/contact          /contact.html        200
-/story/1/sdg      /story/1/sdg.html    200
-/story/2/primero  /story/2/primero.html 200
-/story/3/sitemap  /story/3/sitemap.html 200
-/story/4/hellotractor /story/4/hellotractor.html 200
-/story/5/wfp      /story/5/wfp.html    200
-
-# Fallback to Angular for all other routes
+# Fallback to Angular SPA for all routes
 /*                /index.html          200
