@@ -38,10 +38,18 @@ jobs:
         NODE_OPTIONS: --openssl-legacy-provider
       run: npm run build -- --configuration production
 
+    # peaceiris replaces the gh-pages tree. Files that are not in publish_dir
+    # are deleted, which previously removed CNAME and unpublished itforsociety.com.
+    - name: Publish custom domain and SPA fallback
+      run: |
+        printf '%s\n' 'itforsociety.com' > ./dist/ITforSociety/CNAME
+        cp src/404.html ./dist/ITforSociety/404.html
+
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist/ITforSociety
+        cname: itforsociety.com
 

@@ -17,6 +17,16 @@
   <meta name="twitter:image" content="/assets/IT for society cover.png" />
   
   <base href="/">
+  <!-- GitHub Pages SPA redirect recovery. 404.html stores the deep link, then this restores it before Angular boots. -->
+  <script>
+    (function(){
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect != location.href) {
+        history.replaceState(null, null, redirect);
+      }
+    })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/assets/IT for society green transparent.png">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
