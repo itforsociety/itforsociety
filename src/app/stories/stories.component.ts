@@ -49,8 +49,8 @@ export class StoriesComponent implements OnInit {
       this.rowHeight = '1:1.5';
     }
     else{
-      this.numberOfColumns = 3
-      this.rowHeight = '1:1.3';
+      this.numberOfColumns = 3;
+      this.rowHeight = '1:1.55';
     }
   }
 
@@ -70,7 +70,7 @@ export class StoriesComponent implements OnInit {
     }
     else{
       this.numberOfColumns = 3;
-      this.rowHeight = '1:1.3';
+      this.rowHeight = '1:1.55';
     }
     //this.numberOfColumns = (event.target.innerWidth <= 1240) ? 1 : 3;
   }

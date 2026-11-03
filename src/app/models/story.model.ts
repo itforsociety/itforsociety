@@ -12,6 +12,7 @@ export class Story {
 	story_video_URL: string;
 
 	story_content: string;
+	story_date?: string;
 
 	constructor(obj: any = null)
 	{

@@ -11,7 +11,8 @@
 }
 
 .story-header{
-  height: 70px;
+  height: auto;
+  min-height: 70px;
 }
 
 .story-image {

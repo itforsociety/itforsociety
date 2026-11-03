@@ -36,7 +36,8 @@ export class StoryComponent implements OnInit {
       this.story_video_URL  = this.sanitizer.bypassSecurityTrustResourceUrl(this.story.story_video_URL);
       this.title.setTitle(this.story.story_title + " | IT for Society");
       this.meta.updateTag({ name: this.story.story_title, content: this.story.story_subtitle });
-      this.meta.updateTag({ property: "article:published_time", content:"2020-10-16" })
+      const published = this.story.story_date ? this.story.story_date : '2020-10-16';
+      this.meta.updateTag({ property: 'article:published_time', content: published });
 
       this.meta.updateTag({ property: "og:url", content: "itforsociety.com/story/" + this.story.story_id + "/" + this.story.story_tag });
       this.meta.updateTag({ property: "og:title", content: this.story.story_title + " | IT for Society"});
