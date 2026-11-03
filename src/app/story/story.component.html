@@ -6,8 +6,8 @@
             <mat-card-title>{{story.story_title}}</mat-card-title>
             <mat-card-subtitle (click)="shareFB()">{{story.story_subtitle}}</mat-card-subtitle>
             </mat-card-header>
-            <div class="story-image-wrapper">
-                <img class="story-image" src="{{story.story_image}}">
+            <div class="story-image-wrapper" [class.hero-full]="story.story_id == 6">
+                <img class="story-image" src="{{story.story_image}}" [attr.alt]="story.story_id == 6 ? '4 years to 2030. Only 36 percent of measurable SDG targets are on track or moving well. United Nations, July 2026.' : null">
             </div>
             <mat-card-content class="story-content-text">
                 <p *ngIf="!story.story_custom">
@@ -15,6 +15,7 @@
                 </p>
                 <app-story1sdg *ngIf="story.story_id == 1"></app-story1sdg>
                 <app-story3sitemap *ngIf="story.story_id == 3"></app-story3sitemap>
+                <app-story6sdg2026 *ngIf="story.story_id == 6"></app-story6sdg2026>
                 <p *ngIf="story.story_video_URL != 'false' && story.story_id == 4">
                     <iframe width="100%" height="350" src="https://www.youtube.com/embed/FZUilc5I0lw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </p>

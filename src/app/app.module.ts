@@ -25,6 +25,7 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { Story3sitemapComponent } from './story/custom/story3sitemap/story3sitemap.component';
 import { Story1sdgComponent } from './story/custom/story1sdg/story1sdg.component';
+import { Story6sdg2026Component } from './story/custom/story6sdg2026/story6sdg2026.component';
 import { QuoteComponent } from './quote/quote.component';
 import { ProductsComponent } from './products/products.component';
 import { PrivacyComponent } from './privacy/privacy.component';
@@ -97,6 +98,7 @@ const routes: Routes = [
     ContactFormComponent,
     Story3sitemapComponent,
     Story1sdgComponent,
+    Story6sdg2026Component,
     QuoteComponent,
     ProductsComponent,
     PrivacyComponent,

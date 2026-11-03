@@ -11,6 +11,20 @@ export class StoriesService {
   //story: Story = [];
 
   stories: Story[] = [{
+    story_id: 6,
+    story_custom: true,
+    story_title: 'Four Years to 2030: What the SDG Data Really Says',
+    story_subtitle: 'Real gains, record aid cuts, and why trusted data and responsible AI matter for the SDGs\' last mile',
+    story_tag: 'sdg2026',
+    story_avatar: '/assets/SDG/SDG_Wheel_Transparent_WEB.png',
+    story_image: '/assets/stories/6/sdg2026.jpg',
+    story_og_image: '/assets/stories/6/sdg2026.jpg',
+    story_video_URL: 'false',
+    story_date: '2026-11-02',
+    story_content: 'Four years from the 2030 deadline, only 36% of 139 measurable SDG targets ' +
+      'are on track or progressing moderately, and aid fell a record 23.1% in 2025. ' +
+      'Where the EU and Croatia stand, and why trusted data and responsible AI matter for the last mile.'
+  },{
     story_id: 5,
     story_custom: false,
     story_title: 'Share the Meal - The Nobel Peace Prize 2020',
