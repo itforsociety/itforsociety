@@ -23,7 +23,12 @@
               "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
-              "src/404.html"
+              "src/404.html",
+              {
+                "glob": "**/*",
+                "input": "src/private-migraine-tracker",
+                "output": "/private-migraine-tracker"
+              }
             ],
             "styles": [
               "src/styles.scss",
